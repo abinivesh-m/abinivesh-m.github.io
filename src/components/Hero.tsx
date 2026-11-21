@@ -1,13 +1,8 @@
-import { Suspense, lazy, useRef } from "react";
-import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { hero } from "../data/content";
 import { EASE } from "./ui/Reveal";
-import { ErrorBoundary } from "./ui/ErrorBoundary";
-
-const Hero3DCanvas = lazy(() => import("./Hero3D").then((m) => ({ default: m.Hero3D })));
-
-
 
 const quickStats = [
   { value: "113", label: "LeetCode solved" },
@@ -24,29 +19,11 @@ const floatChips = [
 ];
 
 export function Hero() {
-  const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const portraitY = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const fade = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
-
-  const tiltX = useMotionValue(0);
-  const tiltY = useMotionValue(0);
-  const sx = useSpring(tiltX, { stiffness: 120, damping: 18 });
-  const sy = useSpring(tiltY, { stiffness: 120, damping: 18 });
-
-  const onMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (reduce) return;
-    const r = e.currentTarget.getBoundingClientRect();
-    const px = (e.clientX - r.left) / r.width - 0.5;
-    const py = (e.clientY - r.top) / r.height - 0.5;
-    tiltY.set(px * 12);
-    tiltX.set(py * -10);
-  };
-  const onLeave = () => {
-    tiltX.set(0);
-    tiltY.set(0);
-  };
 
   const words = hero.name.split(" ");
 
@@ -62,8 +39,7 @@ export function Hero() {
       <div className="pointer-events-none absolute left-6 top-1/2 hidden -translate-y-1/2 -rotate-90 origin-center font-mono text-[9.5px] uppercase tracking-[0.34em] text-[#3A3F4B] lg:block">
         AI Product Engineer — 2026
       </div>
-      <div className="pointer-events-none absolute -right-[8%] top-[6%] h-[440px] w-[440px] rounded-full bg-[radial-gradient(circle_at_center,rgba(167,139,250,0.22),transparent_62%)] blur-[6px]" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#07080A] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#081426] to-transparent" />
 
       <div className="shell relative">
         <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
@@ -193,52 +169,16 @@ export function Hero() {
             style={{ y: portraitY, opacity: fade }}
             className="relative min-h-[420px] lg:col-span-5"
           >
-            <div className="pointer-events-none absolute inset-0 -z-0 hidden md:block" aria-hidden>
-              <ErrorBoundary>
-                <Suspense fallback={null}>{!reduce && <Hero3DCanvas />}</Suspense>
-              </ErrorBoundary>
-            </div>
-
-            <div
-              onMouseMove={onMove}
-              onMouseLeave={onLeave}
-              className="relative mx-auto flex max-w-[440px] flex-col items-center justify-center py-6"
-              style={{ perspective: 900 }}
-            >
-              <div className="pointer-events-none absolute inset-0 glow-blue blur-2xl" />
-
-              <motion.div
-                style={{ rotateX: sx, rotateY: sy, transformStyle: "preserve-3d" }}
-                initial={reduce ? false : { opacity: 0, scale: 0.92 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.1, delay: 0.2, ease: EASE }}
-                className="relative"
-              >
-                {/* rotating conic ring */}
-                <div className="spin-slow absolute -inset-[10px] rounded-full bg-[conic-gradient(from_0deg,rgba(110,139,255,0.85),rgba(167,139,250,0.5),rgba(110,139,255,0)_40%,rgba(110,139,255,0.85))] blur-[1px]" />
-                <div className="absolute -inset-[6px] rounded-full bg-[#07080A]" />
-
-                <div className="relative h-[276px] w-[276px] overflow-hidden rounded-full border border-white/10 sm:h-[340px] sm:w-[340px]">
-                  <img
-                    src="/profile.jpg"
-                    alt="Abinivesh M"
-                    className="h-full w-full object-cover object-center"
-                    loading="eager"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07080A]/55 via-transparent to-transparent" />
-                </div>
-
-                {/* floating chips */}
-                {floatChips.map((chip) => (
-                  <span
-                    key={chip.text}
-                    className={`absolute ${chip.className} hidden rounded-full border border-line bg-[#0B0D12]/85 px-3 py-1.5 font-mono text-[10.5px] tracking-tight text-[#C7CBD4] shadow-[0_8px_30px_rgba(0,0,0,0.5)] backdrop-blur sm:block`}
-                    style={{ transform: "translateZ(40px)" }}
-                  >
-                    {chip.text}
-                  </span>
-                ))}
-              </motion.div>
+            <div className="relative mx-auto flex max-w-[440px] flex-col items-center justify-center py-6">
+              <div className="relative h-[276px] w-[276px] overflow-hidden rounded-full border border-white/10 sm:h-[340px] sm:w-[340px]">
+                <img
+                  src="/profile.jpg"
+                  alt="Abinivesh M"
+                  className="h-full w-full object-cover object-center"
+                  loading="eager"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#081426]/55 via-transparent to-transparent" />
+              </div>
 
               <div className="mt-9 rounded-full border border-line bg-[#0B0D12]/70 px-4 py-2 backdrop-blur">
                 <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
