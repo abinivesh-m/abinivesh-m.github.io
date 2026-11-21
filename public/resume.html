@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abinivesh M - Resume</title>
+<style>
+  :root { --text: #1a1a1a; --muted: #666; --accent: #0a66c2; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--text);
+    font-size: 9.5pt;
+    line-height: 1.28;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body { max-width: 8.5in; margin: 0 auto; padding: 0.45in; }
+  header { margin-bottom: 6pt; }
+  h1 { font-size: 19pt; font-weight: 700; margin: 0 0 1pt 0; letter-spacing: 0.4pt; }
+  .tagline { font-size: 8pt; color: var(--accent); font-weight: 700; margin: 0 0 3pt 0; letter-spacing: 0.3pt; text-transform: uppercase; }
+  .contact { font-size: 8.5pt; color: var(--muted); margin: 0 0 5pt 0; }
+  .contact a { color: var(--muted); text-decoration: none; }
+  h2 {
+    font-size: 10.5pt; font-weight: 700; color: var(--accent);
+    margin: 7pt 0 2.5pt 0; padding-bottom: 1.5pt;
+    border-bottom: 1px solid #d9d9d9;
+    text-transform: uppercase; letter-spacing: 0.7pt;
+  }
+  h3 { font-size: 9.5pt; font-weight: 700; margin: 4.5pt 0 1pt 0; }
+  .sub { font-size: 8.5pt; color: var(--muted); margin: 0 0 1.5pt 0; }
+  p, li { margin: 0 0 1.5pt 0; }
+  ul { margin: 1.5pt 0 4pt 0; padding-left: 13pt; }
+  li { margin-bottom: 1.5pt; }
+  .tech { font-size: 8.5pt; color: var(--muted); font-style: italic; margin: 0 0 1.5pt 0; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8pt; }
+  .row h3 { margin: 0; }
+  .right { font-size: 8.5pt; color: var(--muted); white-space: nowrap; }
+  .more { font-size: 8.5pt; color: var(--muted); margin: 2pt 0 4pt 0; }
+  .skills-row { font-size: 9pt; margin: 1pt 0 2pt 0; }
+  @media print {
+    body { padding: 0; max-width: none; }
+    @page { size: A4; margin: 0.4in; }
+    h2, h3 { page-break-after: avoid; }
+    li { page-break-inside: avoid; }
+    .tagline, .contact, h2 { color: var(--accent) !important; -webkit-print-color-adjust: exact; }
+  }
+  @media screen {
+    body { box-shadow: 0 1px 6px rgba(0,0,0,0.1); margin: 24px auto; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>ABINIVESH M</h1>
+    <p class="tagline">3× Hackathon Winner · 2× IIT Finalist &amp; Team Leader · HackerRank Campus Crew · ECE @ SKCET</p>
+    <p class="contact">
+      Namakkal, Tamil Nadu, India · +91 77084 63449 · abinivesh.1203@gmail.com<br>
+      GitHub: github.com/abinivesh-m · LinkedIn: linkedin.com/in/abinivesh-m-883052380
+    </p>
+  </header>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <p class="skills-row"><strong>Languages:</strong> Python, Dart, C++, SQL, JavaScript</p>
+    <p class="skills-row"><strong>Systems &amp; Backend:</strong> FastAPI, REST APIs, SQLAlchemy, Pydantic, PostgreSQL, SQLite, DynamoDB, JWT, bcrypt, HMAC-SHA256, rate limiting, CORS</p>
+    <p class="skills-row"><strong>AI/ML:</strong> Google Gemini API, LLM integration, prompt engineering, agentic workflows, scikit-learn, ONNX, YOLO, MediaPipe, NVIDIA Nemotron 3, Amazon Bedrock, Groq, Tavily</p>
+    <p class="skills-row"><strong>Mobile:</strong> Flutter (Dart)</p>
+    <p class="skills-row"><strong>Tools &amp; DevOps:</strong> Git, GitHub Actions (CI/CD), Vercel, AWS (Lambda, API Gateway, DynamoDB, S3, Bedrock), Docker, Postman, Linux CLI</p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="row">
+      <h3>NexusShield — AI Scam Detection Engine</h3>
+      <span class="right">github.com/abinivesh-m/Nexus-Shield</span>
+    </div>
+    <p class="tech">Flutter · FastAPI · PostgreSQL · Google Gemini API · HMAC-SHA256 · Vercel</p>
+    <ul>
+      <li>Engineered an AI scam detection system scoring internship/job offers 0–100 with red-flag explanations and employer-domain verification, shipped to students via Flutter + FastAPI + PostgreSQL on Vercel.</li>
+      <li>Implemented HMAC-SHA256 cryptographic receipts for tamper-evident, publicly verifiable, revocable offer validation requiring zero login/auth.</li>
+      <li>Achieved 38/38 passing backend tests with GitHub Actions CI/CD; privacy architecture hashes and redacts PII in offer text at rest with consent-gated access and account deletion.</li>
+    </ul>
+
+    <div class="row">
+      <h3>SkillNexus AI — 6-Agent Career Orchestration Platform</h3>
+      <span class="right">github.com/abinivesh-m/Skillnexus-ai</span>
+    </div>
+    <p class="tech">Python · FastAPI · LLM Agents · Docker · Cloud Run</p>
+    <ul>
+      <li>Architected a 6-agent LLM swarm (Profile, Gap, Curriculum, Resource, Assessor, Mentor) with deterministic weighted readiness scoring and DAG-based prerequisite sequencing; won 1st place (₹20,000) at PromptWars × RTC GDC Hackathon 2026.</li>
+      <li>Engineered a counterfactual "what-if" simulation engine recalculating career readiness in real time upon skill mastery, projecting multi-timeline career convergence paths.</li>
+      <li>Built a &lt;1 MB production FastAPI backend with Dockerized Cloud Run deployment; zero LLM hallucination in readiness metrics via a deterministic math layer.</li>
+    </ul>
+
+    <div class="row">
+      <h3>TrackX — City-Wide ANPR Vehicle Intelligence</h3>
+      <span class="right">github.com/abinivesh-m/TrackX</span>
+    </div>
+    <p class="tech">Python · OpenCV · ONNX · FastAPI · React · SIH 2026 (BEL)</p>
+    <ul>
+      <li>Developed an ANPR vehicle tracking pipeline fusing plate text, vehicle appearance, geolocation, and time from existing CCTV infrastructure (Smart India Hackathon 2026, BEL problem statement, TRL 4–5).</li>
+      <li>Trained an ONNX detection model and served real-time inference via FastAPI with a React web dashboard for live vehicle tracking and trajectory visualization.</li>
+      <li>Led team to Top 50 of 750 teams in SIH 2026 internal round (SKCET).</li>
+    </ul>
+
+    <div class="row">
+      <h3>RoadSOS — Driver Monitoring &amp; Emergency Response</h3>
+      <span class="right">github.com/abinivesh-m/RoadSOS-AI</span>
+    </div>
+    <p class="tech">Python · YOLOv8 · MediaPipe · Streamlit</p>
+    <ul>
+      <li>Built a real-time driver monitoring system detecting phone usage (YOLOv8 object detection) and drowsiness (MediaPipe Eye Aspect Ratio) with an automated SOS countdown and GPS alerting pipeline.</li>
+      <li>Reached national finalist stage at BIMSTEC AI National Road Safety Hackathon 2026 (IIT Madras), selected from 15,000+ registrations.</li>
+      <li>Implemented a risk scoring engine with simulated accident detection and a cancel-window mechanism to reduce false-alarm emergency dispatches.</li>
+    </ul>
+    <p class="more">Additional: Best Before (AI answer freshness), ClaimShield (claim verification), Deja Vu (on-call SRE agent, Hindsight + Groq), FlowMoney AI, BuildFlow AI — github.com/abinivesh-m</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="row">
+      <h3>Software Engineering Intern (Full Stack)</h3>
+      <span class="right">May 2026 – Jun 2026</span>
+    </div>
+    <p class="sub">Thiranex (Remote)</p>
+    <ul>
+      <li>Contributed to full-stack feature development under senior mentorship, shipping practice projects through code review and CI/CD feedback loops.</li>
+    </ul>
+
+    <div class="row">
+      <h3>HackerRank Campus Crew</h3>
+      <span class="right">Nov 2026 – Present</span>
+    </div>
+    <p class="sub">SKCET (Remote)</p>
+    <ul>
+      <li>Led HackerRank Campus Crew community at SKCET; designed and executed "Mission 404," a 6-problem coding contest with cross-department student participation; serve as primary HackerRank–campus point of contact.</li>
+    </ul>
+
+    <div class="row">
+      <h3>Campus Ambassador</h3>
+      <span class="right">Apr 2026 – Aug 2026</span>
+    </div>
+    <p class="sub">Unlox Academy (Remote)</p>
+    <ul>
+      <li>Drove student-community growth and career-program outreach across campus networks; acted as the organization–student communication bridge.</li>
+    </ul>
+
+    <div class="row">
+      <h3>Member — Google Developer Group (GDG)</h3>
+      <span class="right">Nov 2026 – Present</span>
+    </div>
+    <p class="sub">Coimbatore</p>
+    <ul>
+      <li>Participated in developer community events and technical workshops.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="row">
+      <h3>B.E. Electronics and Communication Engineering</h3>
+      <span class="right">Aug 2025 – Aug 2029 (expected)</span>
+    </div>
+    <p class="sub">Sri Krishna College of Engineering and Technology (SKCET), Coimbatore · CGPA: 9.1/10 · 4th semester</p>
+    <p class="sub"><strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Operating Systems, Software Engineering, Microprocessors, Signals &amp; Systems</p>
+  </section>
+
+  <section>
+    <h2>Competitive Programming</h2>
+    <ul>
+      <li>LeetCode — 113 problems solved (39 Easy, 59 Medium, 15 Hard), Contest Rating 1480, 81.29% acceptance rate, beats 69–77% of users</li>
+      <li>HackerRank — Software Engineer Intern certification (ID: 6B083196A958)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Awards &amp; Honors</h2>
+    <ul>
+      <li>1st place — PromptWars × RTC GDC Hackathon 2026 (₹20,000)</li>
+      <li>National Finalist — BIMSTEC AI National Road Safety Hackathon 2026 (IIT Madras; 15,000+ registrations)</li>
+      <li>4th place — ChurnZero 2026, IIT Kharagpur</li>
+      <li>Top 50 of 750 teams — Smart India Hackathon 2026 internal round, SKCET (Team Leader, Team NexusAI/NexussAI)</li>
+      <li>Rank 8 — Season 2, National Cloud &amp; AI Innovation Challenge (3SVK; 3.4K+ participants)</li>
+      <li>Finalist — IEEE SmartAIthon 2026 (IEEE Smart Cities AI Hackathon, Karpagam College)</li>
+      <li>Finalist — CodeSprint: One Shot Challenge (Oriental College of Technology, Bhopal)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>HackerRank Software Engineer Intern certification (ID: 6B083196A958)</li>
+      <li>AI For Everyone — DeepLearning.AI / Coursera</li>
+      <li>Google Data Analytics Capstone — Coursera</li>
+      <li>Getting Started with AI — IBM SkillsBuild</li>
+      <li>Unlocking AI for Everyone (Beginner) — NSDC / Skill India Digital Hub (NSQF Level 2)</li>
+      <li>eSim — IIT Bombay / SINE / EduPyramids (Score: 85.71%, 2 credits)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <p>Tamil (native), English (professional)</p>
+  </section>
+</body>
+</html>
