@@ -1,4 +1,4 @@
-import { Award, Trophy, Globe2, TrendingUp, Flag, Cloud, Cpu, Code2 } from "lucide-react";
+import { Globe2, TrendingUp, Flag, Cloud, Cpu, Code2, Trophy } from "lucide-react";
 import { achievements } from "../data/content";
 import { Reveal, RevealStagger, StaggerItem } from "./ui/Reveal";
 import { SectionHeader } from "./ui/SectionHeader";

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { hero } from "../data/content";
 import { EASE } from "./ui/Reveal";
@@ -9,13 +9,6 @@ const quickStats = [
   { value: "3×", label: "Hackathon wins" },
   { value: "2×", label: "IIT finals" },
   { value: "9.1", label: "CGPA / 10" },
-];
-
-const floatChips = [
-  { text: "FastAPI", className: "left-[-18px] top-[18%] float-a" },
-  { text: "Gemini", className: "right-[-26px] top-[34%] float-b" },
-  { text: "Flutter", className: "left-[2%] bottom-[16%] float-c" },
-  { text: "AWS", className: "right-[0%] bottom-[8%] float-a" },
 ];
 
 export function Hero() {
