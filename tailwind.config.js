@@ -11,7 +11,7 @@ export default {
       colors: {
         ink: "#F4F5F7",
         muted: "#8B909A",
-        canvas: "#07080A",
+        canvas: "#0B1220",
         panel: "#0C0E12",
         line: "rgba(255,255,255,0.09)",
         accent: "#6E8BFF",

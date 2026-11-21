@@ -56,7 +56,9 @@ export function Hero() {
       ref={ref}
       className="relative overflow-hidden pb-16 pt-[112px] sm:pb-24 sm:pt-[136px]"
     >
-      <div className="pointer-events-none absolute inset-0 grid-lines opacity-70" />
+      <div className="pointer-events-none absolute inset-0 grid-lines opacity-60" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#081426] opacity-60" />
+      <div className="pointer-events-none absolute inset-0 opacity-80 [background-image:radial-gradient(ellipse_at_center,transparent_55%,rgba(8,20,38,0.9))]" />
       <div className="pointer-events-none absolute left-6 top-1/2 hidden -translate-y-1/2 -rotate-90 origin-center font-mono text-[9.5px] uppercase tracking-[0.34em] text-[#3A3F4B] lg:block">
         AI Product Engineer — 2026
       </div>

@@ -4,12 +4,13 @@
 
 @layer base {
   :root {
-    --canvas: #07080a;
+    --canvas: #081426;
+    --canvas-2: #0c1d36;
     --ink: #f4f5f7;
-    --muted: #8b909a;
+    --muted: #9aa0ab;
     --accent: #6e8bff;
     --violet: #a78bfa;
-    --line: rgba(255, 255, 255, 0.09);
+    --line: rgba(255, 255, 255, 0.08);
   }
 
   * {
@@ -25,6 +26,11 @@
   body {
     margin: 0;
     background-color: var(--canvas);
+    background-image:
+      radial-gradient(1400px 700px at 50% -20%, rgba(110, 139, 255, 0.18), transparent 55%),
+      radial-gradient(1000px 600px at 100% 20%, rgba(167, 139, 250, 0.12), transparent 55%),
+      radial-gradient(800px 400px at 0% 80%, rgba(110, 139, 255, 0.08), transparent 50%);
+    background-attachment: fixed;
     color: var(--ink);
     font-family: "Inter", system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
@@ -40,15 +46,15 @@
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #07080a;
+    background: #0b1220;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1c2029;
+    background: #1c2538;
     border-radius: 99px;
-    border: 2px solid #07080a;
+    border: 2px solid #0b1220;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #2c333f;
+    background: #2c3a55;
   }
 
   :focus-visible {
@@ -83,12 +89,12 @@
   .chip {
     @apply inline-flex items-center rounded-full border px-3 py-1 font-mono text-[11px] tracking-tight text-muted transition-colors duration-300;
     border-color: var(--line);
-    background: rgba(255, 255, 255, 0.015);
+    background: rgba(255, 255, 255, 0.02);
   }
   .chip:hover {
     color: var(--ink);
     border-color: rgba(110, 139, 255, 0.45);
-    background: rgba(110, 139, 255, 0.07);
+    background: rgba(110, 139, 255, 0.08);
   }
 
   .label {
@@ -125,7 +131,7 @@
 
   .panel {
     border: 1px solid var(--line);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0.008));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.008));
     border-radius: 18px;
   }
 }
@@ -136,13 +142,13 @@
     inset: 0;
     z-index: 60;
     pointer-events: none;
-    opacity: 0.035;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.006;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
   .grid-lines {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 72px 72px;
     mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
     -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
@@ -156,7 +162,7 @@
   }
 
   .glow-blue {
-    background: radial-gradient(circle at center, rgba(110, 139, 255, 0.35), transparent 62%);
+    background: radial-gradient(circle at center, rgba(110, 139, 255, 0.28), transparent 62%);
   }
 
   .animate-marquee {
