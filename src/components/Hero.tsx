@@ -1,8 +1,13 @@
-import { useRef } from "react";
+import { Suspense, lazy, useRef } from "react";
 import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { hero } from "../data/content";
 import { EASE } from "./ui/Reveal";
+import { ErrorBoundary } from "./ui/ErrorBoundary";
+
+const Hero3DCanvas = lazy(() => import("./Hero3D").then((m) => ({ default: m.Hero3D })));
+
+
 
 const quickStats = [
   { value: "113", label: "LeetCode solved" },
@@ -52,7 +57,9 @@ export function Hero() {
       className="relative overflow-hidden pb-16 pt-[112px] sm:pb-24 sm:pt-[136px]"
     >
       <div className="pointer-events-none absolute inset-0 grid-lines opacity-70" />
-      <div className="pointer-events-none absolute -left-[10%] -top-[10%] h-[520px] w-[520px] glow-blue opacity-60 blur-[10px]" />
+      <div className="pointer-events-none absolute left-6 top-1/2 hidden -translate-y-1/2 -rotate-90 origin-center font-mono text-[9.5px] uppercase tracking-[0.34em] text-[#3A3F4B] lg:block">
+        AI Product Engineer — 2026
+      </div>
       <div className="pointer-events-none absolute -right-[8%] top-[6%] h-[440px] w-[440px] rounded-full bg-[radial-gradient(circle_at_center,rgba(167,139,250,0.22),transparent_62%)] blur-[6px]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#07080A] to-transparent" />
 
@@ -182,8 +189,14 @@ export function Hero() {
           {/* ---------------- right ---------------- */}
           <motion.div
             style={{ y: portraitY, opacity: fade }}
-            className="relative lg:col-span-5"
+            className="relative min-h-[420px] lg:col-span-5"
           >
+            <div className="pointer-events-none absolute inset-0 -z-0 hidden md:block" aria-hidden>
+              <ErrorBoundary>
+                <Suspense fallback={null}>{!reduce && <Hero3DCanvas />}</Suspense>
+              </ErrorBoundary>
+            </div>
+
             <div
               onMouseMove={onMove}
               onMouseLeave={onLeave}

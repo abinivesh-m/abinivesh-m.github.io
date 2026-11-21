@@ -87,6 +87,8 @@ function ProjectVisual({
   );
 }
 
+import { TiltCard } from "./ui/TiltCard";
+
 export function Work() {
   const featured = projects.filter((p) => p.featured);
   const rest = projects.filter((p) => !p.featured);
@@ -163,7 +165,9 @@ export function Work() {
                   </div>
 
                   <div className="lg:col-span-6 xl:col-span-5">
-                    <ProjectVisual index={i} name={p.name} tagline={p.tagline} metric={p.impact} />
+                    <TiltCard>
+                      <ProjectVisual index={i} name={p.name} tagline={p.tagline} metric={p.impact} />
+                    </TiltCard>
                   </div>
                 </div>
               </article>
