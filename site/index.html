@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,171 +7,236 @@
   <meta name="description" content="Portfolio of Abinivesh M — 3× Hackathon Winner, 2× IIT Finalist, HackerRank Campus Crew Leader, building AI systems and Full Stack apps.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Preloader Screen -->
-  <div id="loader" class="loader">
-    <div class="loader-content">
-      <div class="loader-badge">PORTFOLIO '26</div>
-      <h1 class="loader-name">ABINIVESH M</h1>
-      <p class="loader-sub">AI PRODUCT ENGINEER · SDE</p>
-      <div class="loader-track">
-        <div id="loader-bar" class="loader-bar"></div>
-      </div>
-      <div id="loader-percent" class="loader-percent">0%</div>
-    </div>
-  </div>
-
-  <!-- Top Navigation & Progress Bar -->
+  <!-- Top Navigation Bar -->
   <header class="topbar">
-    <div class="topbar-left">
-      <a href="#intro" class="brand-name">ABINIVESH M</a>
-      <span class="status-pill"><span class="dot"></span> OPEN FOR ROLES</span>
-    </div>
-    <nav class="topbar-nav" id="nav-links">
-      <a href="#intro" class="nav-link active">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#work" class="nav-link">Work</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#resume" class="nav-link">Résumé</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-    <div class="progress-bar-container">
-      <div id="scroll-progress" class="scroll-progress"></div>
+    <div class="topbar-container">
+      <a href="#" class="brand">
+        <span class="brand-name">Abinivesh M</span>
+        <span class="brand-role">/ SDE & AI Systems</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-theme-toggle" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="media/resume.pdf" download class="btn-resume-header">
+          <span>Résumé</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Fullscreen Video / Stage Layer -->
-  <div class="stage" id="stage">
-    <video id="film" class="film" playsinline muted preload="auto" poster="media/poster.jpg"></video>
-    <canvas id="stage-canvas" class="stage-canvas"></canvas>
-    <div class="stage-vignette"></div>
-  </div>
+  <main class="page-container">
 
-  <!-- Scrollable Sections Container -->
-  <div class="sections" id="sections">
+    <!-- Hero Section -->
+    <section class="hero-section" id="intro">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Available for SDE & AI Engineering Roles · Class of '29</span>
+          </div>
 
-    <!-- 01: INTRO -->
-    <section class="panel panel-intro active" id="intro" data-section="intro">
-      <div class="panel-inner intro-inner">
-        <span class="eyebrow-pill">SOFTWARE ENGINEER & AI ARCHITECT</span>
-        <h1 class="hero-heading">
-          <span class="light-text">HI, I'M</span>
-          <span class="accent-text">ABINIVESH M</span>
-        </h1>
-        <p class="hero-role" id="hero-role">AI Product Engineer · Full Stack SDE</p>
-        <p class="hero-desc">
-          Building deterministic AI swarms, real-time vision pipelines, and scalable cloud systems.
-        </p>
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">Explore Work ↓</a>
-          <a href="media/resume.pdf" download class="btn btn-secondary">Download Résumé</a>
-        </div>
-        <div class="scroll-hint">
-          <span class="scroll-icon"></span>
-          <span>Scroll down to navigate film</span>
-        </div>
-      </div>
-    </section>
+          <h1 class="hero-title">
+            Engineering distributed systems & <span class="gradient-text">production AI</span>.
+          </h1>
 
-    <!-- 02: ABOUT -->
-    <section class="panel panel-about" id="about" data-section="about">
-      <div class="panel-inner glass about-card">
-        <div class="eyebrow" id="about-eyebrow">01 — ABOUT ME</div>
-        <h2 class="section-title" id="about-title">I build AI systems that solve real problems.</h2>
-        <p class="section-para" id="about-para">
-          2nd-year ECE student at SKCET with a 9.1 CGPA. I architect end-to-end distributed systems, multi-agent LLM swarms, and high-throughput vision pipelines. 3× Hackathon Winner, 2× IIT Finalist & Team Leader.
-        </p>
-        <div class="stats-grid" id="stats-grid">
-          <!-- Dynamically populated from config.js -->
-        </div>
-      </div>
-    </section>
+          <p class="hero-subtitle">
+            I'm <strong class="text-contrast">Abinivesh M</strong>, a 2nd-year ECE undergraduate at <strong>SKCET, Coimbatore (9.1 CGPA)</strong>. 
+            I build end-to-end full-stack systems, multi-agent LLM swarms, and high-throughput vision pipelines with deterministic correctness, rigorous automated testing, and sub-second latency.
+          </p>
 
-    <!-- 03: WORK -->
-    <section class="panel panel-work" id="work" data-section="work">
-      <div class="panel-inner work-container">
-        <div class="work-header">
-          <div class="eyebrow">02 — FEATURED PRODUCTIONS</div>
-          <h2 class="section-title">ENGINEERED TO SHIP</h2>
-          <p class="work-sub">6 production-grade systems spanning agentic swarms, computer vision, and cloud microservices.</p>
-        </div>
-        <div class="projects-deck" id="projects-deck">
-          <!-- Dynamically populated project cards -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 04: SKILLS -->
-    <section class="panel panel-skills" id="skills" data-section="skills">
-      <div class="panel-inner glass skills-card">
-        <div class="eyebrow">03 — TECHNICAL STACK</div>
-        <h2 class="section-title">BREADTH & DEPTH</h2>
-        <div class="skills-categories" id="skills-categories">
-          <!-- Dynamically populated skill chips -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 05: RÉSUMÉ -->
-    <section class="panel panel-resume" id="resume" data-section="resume">
-      <div class="panel-inner resume-sheet" id="resume-sheet">
-        <div class="resume-sheet-header">
-          <div class="eyebrow">04 — RÉSUMÉ & TRACK RECORD</div>
-          <a href="media/resume.pdf" download class="btn-download-resume">
-            <span>Download PDF</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          </a>
-        </div>
-
-        <div class="resume-grid">
-          <div class="resume-col">
-            <h3 class="resume-group-title">EXPERIENCE & LEADERSHIP</h3>
-            <div id="resume-experience" class="resume-items">
-              <!-- Dynamically populated -->
+          <div class="hero-metrics-strip">
+            <div class="metric-card">
+              <span class="metric-value">₹20,000</span>
+              <span class="metric-label">1st Place Winner (PromptWars '26)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">9.1 / 10</span>
+              <span class="metric-label">CGPA @ SKCET (Top Tier)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">113 Solved</span>
+              <span class="metric-label">LeetCode (1480 Rating · 81% Acc)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">3× / 2×</span>
+              <span class="metric-label">Hackathon Winner · IIT Finalist</span>
             </div>
           </div>
-          <div class="resume-col">
-            <h3 class="resume-group-title">EDUCATION & COMPETITIVE</h3>
-            <div id="resume-education" class="resume-items">
-              <!-- Dynamically populated -->
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects & Systems</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="media/resume.pdf" download class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download CV</span>
+            </a>
+            <a href="https://github.com/abinivesh-m" target="_blank" rel="noreferrer" class="btn btn-ghost" title="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="portrait-card">
+            <div class="portrait-image-wrapper">
+              <img src="media/portrait.png" alt="Abinivesh M" class="portrait-photo">
             </div>
-            <div class="leetcode-highlight">
-              <div class="lc-header">
-                <span class="lc-title">LEETCODE METRICS</span>
-                <span class="lc-badge">Rating 1480</span>
+            <div class="portrait-meta">
+              <div class="portrait-title">Abinivesh M</div>
+              <div class="portrait-subtitle">HackerRank Campus Crew Leader @ SKCET</div>
+              <div class="portrait-badges">
+                <span class="p-badge">Python</span>
+                <span class="p-badge">FastAPI</span>
+                <span class="p-badge">Flutter</span>
+                <span class="p-badge">AWS</span>
+                <span class="p-badge">Docker</span>
               </div>
-              <p class="lc-stats">113 Solved (39 Easy · 59 Medium · 15 Hard) · 81.3% Acceptance · Top 69–77%</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 06: CONTACT -->
-    <section class="panel panel-contact" id="contact" data-section="contact">
-      <div class="contact-frame-wrapper">
-        <svg class="contact-drawn-frame" viewBox="0 0 460 620" fill="none">
-          <rect x="5" y="5" width="450" height="610" rx="36" stroke="#ff9a4d" stroke-width="3" stroke-dasharray="2200" stroke-dashoffset="2200" id="contact-svg-rect" />
-        </svg>
+    <!-- Engineering Philosophy / Highlights -->
+    <section class="section" id="about">
+      <div class="section-header">
+        <span class="section-tag">ENGINEERING FOCUS</span>
+        <h2 class="section-title">Production Rigor, Not Just Prototypes</h2>
+        <p class="section-desc">How I approach software engineering across full-stack and AI product lifecycles.</p>
       </div>
 
-      <div class="panel-inner glass contact-card">
-        <div class="eyebrow">05 — GET IN TOUCH</div>
-        <h2 class="contact-headline">LET'S BUILD SOMETHING EXTRAORDINARY.</h2>
-        <p class="contact-desc">
-          Available for software engineering internships and high-impact AI/Full Stack roles. Let's talk code, systems, or hackathons.
-        </p>
-        <div class="contact-links" id="contact-links">
-          <!-- Dynamically populated -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Deterministic Math Over Hallucination</h3>
+          <p class="feature-text">
+            In SkillNexus AI, readiness scoring is powered by pure arithmetic and DAG graphs rather than probabilistic LLM guessing. Zero variance, 100% auditable.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3 class="feature-title">Security & Cryptographic Proofs</h3>
+          <p class="feature-text">
+            Engineered HMAC-SHA256 signed public receipts for NexusShield with automated PII redaction at rest, strict CORS, and 38/38 passing CI/CD tests.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏎️</div>
+          <h3 class="feature-title">Latency Optimization & Inference</h3>
+          <p class="feature-text">
+            Trained and converted ONNX models for TrackX city-scale vehicle tracking, bringing inference down to sub-300ms from CCTV video feeds.
+          </p>
         </div>
       </div>
     </section>
 
-  </div>
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <span class="section-tag">FEATURED WORK</span>
+        <h2 class="section-title">Systems & Products Shipped</h2>
+        <p class="section-desc">Production codebases with live deployments, automated testing, and demonstrable impact.</p>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Dynamically rendered from config.js -->
+      </div>
+    </section>
+
+    <!-- Technical Stack Section -->
+    <section class="section" id="skills">
+      <div class="section-header">
+        <span class="section-tag">TOOLING & CAPABILITIES</span>
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-desc">Languages, architectures, AI frameworks, and cloud deployment pipelines.</p>
+      </div>
+
+      <div class="skills-card-grid" id="skills-grid">
+        <!-- Dynamically rendered from config.js -->
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section class="section" id="experience">
+      <div class="section-header">
+        <span class="section-tag">BACKGROUND & TRACK RECORD</span>
+        <h2 class="section-title">Experience & Education</h2>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-col">
+          <h3 class="col-title">Industry & Campus Leadership</h3>
+          <div id="experience-list" class="timeline-cards"></div>
+        </div>
+
+        <div class="timeline-col">
+          <h3 class="col-title">Education & Algorithmic Rigor</h3>
+          <div id="education-list" class="timeline-cards"></div>
+          
+          <div class="card leetcode-box">
+            <div class="lc-top">
+              <span class="lc-heading">LEETCODE COMPETITIVE METRICS</span>
+              <span class="lc-rating-pill">Rating 1480</span>
+            </div>
+            <p class="lc-stats">
+              <strong>113 Problems Solved</strong> (39 Easy · 59 Medium · 15 Hard)<br>
+              <strong>81.29%</strong> Acceptance Rate · Beats <strong>69–77%</strong> of active contest competitors.
+            </p>
+            <a href="https://leetcode.com/u/Abinivesh__M/" target="_blank" rel="noreferrer" class="link-arrow">
+              View LeetCode Profile →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Call to Action -->
+    <section class="section contact-section" id="contact">
+      <div class="contact-box">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="contact-title">Let's discuss SDE & AI engineering opportunities.</h2>
+        <p class="contact-desc">
+          I am actively seeking software engineering internships and junior roles at Tier-1 technology companies.
+        </p>
+
+        <div class="contact-channels" id="contact-channels"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© <span id="year"></span> Abinivesh M · B.E. ECE @ SKCET · Designed for clarity, performance, and engineering rigor.</p>
+      <div class="footer-links">
+        <a href="https://github.com/abinivesh-m" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/abinivesh-m-883052380" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:abinivesh.1203@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="config.js"></script>
   <script src="app.js"></script>
