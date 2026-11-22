@@ -1,69 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abinivesh M — AI Product Engineer & SDE</title>
-  <link rel="canonical" href="https://abinivesh-m.github.io/" />
-  <meta name="google-site-verification" content="MgbClSjssZzo1sgHdfjCF-eEpScsshqoe18WU4Otwnc" />
-  <meta name="description" content="Abinivesh M — AI Product Engineer and Software Engineer. 3× hackathon winner, 2× IIT finalist. I build AI products that ship: Flutter, FastAPI, LLMs, AWS." />
-  <meta name="theme-color" content="#081426" />
-  <meta property="og:title" content="Abinivesh M — AI Product Engineer & SDE" />
-  <meta property="og:description" content="AI products that ship. 3× hackathon winner · 2× IIT finalist · HackerRank Campus Crew." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abinivesh-m.github.io/" />
-  <meta property="og:image" content="https://abinivesh-m.github.io/og-image.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Abinivesh M — AI Product Engineer & SDE" />
-  <meta name="twitter:description" content="AI products that ship. 3× hackathon winner · 2× IIT finalist · HackerRank Campus Crew." />
-  <meta name="twitter:image" content="https://abinivesh-m.github.io/og-image.svg" />
-  <meta name="theme-color" content="#081426" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23081426'/><rect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%236E8BFF' stroke-opacity='.5'/><text x='32' y='44' font-size='34' font-family='Inter,sans-serif' font-weight='600' fill='%23F4F5F7' text-anchor='middle'>A</text></svg>" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Abinivesh M",
-    "url": "https://abinivesh-m.github.io/",
-    "image": "https://abinivesh-m.github.io/profile.jpg",
-    "sameAs": [
-      "https://github.com/abinivesh-m",
-      "https://linkedin.com/in/abinivesh-m-883052380",
-      "https://leetcode.com/u/Abinivesh__M/"
-    ],
-    "jobTitle": "AI Product Engineer & Software Engineer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Sri Krishna College of Engineering and Technology (SKCET)"
-    },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Sri Krishna College of Engineering and Technology (SKCET)"
-    },
-    "knowsAbout": [
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Large Language Models",
-      "Flutter",
-      "FastAPI",
-      "Python",
-      "Dart",
-      "C++",
-      "PostgreSQL",
-      "AWS",
-      "Docker",
-      "CI/CD",
-      "Competitive Programming"
-    ],
-    "description": "AI Product Engineer and Software Engineer. 3× hackathon winner, 2× IIT finalist. Building AI products that ship: Flutter, FastAPI, LLMs, AWS."
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abinivesh M — AI Product Engineer & SDE</title>
+<meta name="description" content="Abinivesh M — AI Product Engineer & SDE. 3× hackathon winner, 2× IIT finalist.">
+<link rel="canonical" href="https://abinivesh-m.github.io/">
+<meta name="google-site-verification" content="MgbClSjssZzo1sgHdfjCF-eEpScsshqoe18WU4Otwnc" />
+<meta property="og:title" content="Abinivesh M — AI Product Engineer & SDE">
+<meta property="og:description" content="3× hackathon winner, 2× IIT finalist. Building AI products that ship.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abinivesh-m.github.io/">
+<link rel="stylesheet" href="style.css">
+<script src="config.js" defer></script>
 </head>
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+
+<div class="loader" id="loader">
+  <h1>Abinivesh M</h1>
+  <div class="bar"><div class="bar-fill" id="load-bar"></div></div>
+  <div class="pct" id="load-pct">0%</div>
+</div>
+
+<div class="topbar">
+  <div class="logo">A<span class="accent">M</span>.</div>
+  <nav>
+    <a href="#intro" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+<div class="progress"><div class="progress-fill" id="progress-fill"></div></div>
+
+<div class="stage">
+  <video id="film" preload="auto" muted playsinline webkit-playsinline>
+    <source src="media/film.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div class="sections">
+  <section id="intro">
+    <div class="panel" id="intro">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Abinivesh<br><span class="accent">M</span></h1>
+      <p class="mt-2" style="color:var(--text); font-size:1.2rem;">AI Product Engineer & SDE</p>
+      <p class="mt-4" style="color:var(--muted);">Namakkal, Tamil Nadu · Open to SDE/AI roles</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="panel" id="about">
+      <p class="eyebrow">01 - About</p>
+      <h2>I build AI products that ship.</h2>
+      <p>2nd-year ECE @ SKCET. I've shipped 7 products — scam detection, multi-agent career guidance, ANPR vehicle tracking — end-to-end with Flutter, FastAPI, LLMs and AWS.</p>
+      <div class="chips mt-4">
+        <span class="stat">113</span><span class="stat-label">LeetCode</span>
+        <span class="stat">3×</span><span class="stat-label">Hackathon wins</span>
+        <span class="stat">2×</span><span class="stat-label">IIT finals</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="panel" id="work">
+      <p class="eyebrow">02 - Work</p>
+      <h2>Selected Projects</h2>
+      <div class="chips mt-4">
+        <span class="chip">NexusShield · Flutter/FastAPI/PostgreSQL/Gemini</span>
+        <span class="chip">SkillNexus AI · 6-agent LLM swarm</span>
+        <span class="chip">TrackX · ANPR/ONNX/FastAPI/React</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="panel" id="skills">
+      <p class="eyebrow">03 - Skills</p>
+      <h2>Stack</h2>
+      <div class="chips mt-4">
+        <span class="chip">Python</span><span class="chip">Dart</span><span class="chip">C++</span>
+        <span class="chip">FastAPI</span><span class="chip">Flutter</span><span class="chip">PostgreSQL</span>
+        <span class="chip">AWS</span><span class="chip">LLMs</span><span class="chip">Docker</span><span class="chip">CI/CD</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="panel" id="resume">
+      <p class="eyebrow">04 - Resume</p>
+      <h2>Experience & Education</h2>
+      <p style="color:var(--text);">Software Engineering Intern, Thiranex, 2026 · HackerRank Campus Crew, SKCET, 2026-present</p>
+      <p class="mt-3" style="color:var(--muted);">B.E. ECE, SKCET, Coimbatore, 2025-2029 (expected), CGPA 9.1/10</p>
+      <a href="media/resume.pdf" download class="mt-4 inline-block" style="color:var(--accent); text-decoration:none; font-weight:600; border-bottom:1px solid var(--accent);">Download Resume →</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="panel" id="contact">
+      <p class="eyebrow">05 - Contact</p>
+      <h2>Let's build something.</h2>
+      <p class="mt-3">Open to SDE and AI engineering roles.</p>
+      <div class="mt-5" style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="mailto:abinivesh.1203@gmail.com" style="color:var(--text); text-decoration:none; border-bottom:1px solid var(--accent);">abinivesh.1203@gmail.com</a>
+        <a href="https://github.com/abinivesh-m" target="_blank" style="color:var(--muted); text-decoration:none; margin-left:1rem;">GitHub</a>
+        <a href="https://linkedin.com/in/abinivesh-m-883052380" target="_blank" style="color:var(--muted); text-decoration:none; margin-left:1rem;">LinkedIn</a>
+        <a href="https://leetcode.com/u/Abinivesh__M" target="_blank" style="color:var(--muted); text-decoration:none; margin-left:1rem;">LeetCode</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="scroll-hint">Scroll to begin</div>
+
+<script src="app.js" defer></script>
 </body>
 </html>
