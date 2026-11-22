@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   verification: {
     google: 'MgbClSjssZzo1sgHdfjCF-eEpScsshqoe18WU4Otwnc',
   },
-  themeColor: '#07111f',
   openGraph: {
     title: 'Abinivesh M — AI Product Engineer & SDE',
     description: '3× Hackathon Winner · 2× IIT Finalist · AI Product Engineer & SDE',
@@ -32,6 +31,10 @@ export const metadata: Metadata = {
     description: '3× Hackathon Winner · 2× IIT Finalist · AI Product Engineer & SDE',
     images: ['/assets/portrait.png'],
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#07111f',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

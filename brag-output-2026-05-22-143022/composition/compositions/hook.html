@@ -40,7 +40,7 @@
 
   <div id="root" data-composition-id="hook" data-width="1920" data-height="1080">
     <div class="name-block">
-      <span id="line1" class="clip name-line" data-start="0" data-duration="3" style="opacity:1;transform:scale(1);filter:blur(0)">Abinivesh</span>
+      <span id="line1" class="clip name-line" data-start="0" data-duration="3">Abinivesh</span>
       <span id="line2" class="clip name-line accent" data-start="0.5" data-duration="2.5">M</span>
       <div id="subtitle" class="clip subtitle" data-start="1" data-duration="2">AI Product Engineer &amp; SDE</div>
     </div>
@@ -48,6 +48,8 @@
 
   <script>
     const tl = gsap.timeline({ paused: true });
+
+    tl.set("#line1", { opacity: 1, scale: 1, filter: "blur(0)" }, 0);
 
     tl.fromTo(
       "#line2",

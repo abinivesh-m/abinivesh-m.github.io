@@ -1,5 +1,14 @@
-node_modules
-dist
-*.local
+﻿# Next.js
+.next/
+out/
+dist/
+
+# Brag video output (large, optional)
+brag-output-*/
+
+# Dependencies
+node_modules/
+
+# OS
 .DS_Store
-shot-*.png
+Thumbs.db

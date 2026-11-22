@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "64791db8-00f7-43e4-bc39-fa48bb8c0e39",
-  "currentRevision": "7e86c6b6-d247-41e8-91e4-db2775b9a4fd",
+  "currentRevision": "4ab1502e-e57c-4c12-950e-d4a56eef9ff2",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -25,8 +25,8 @@
       "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\35\\35f9e252f8b1fbd80a28ca53e6c9108b54fe992c54aff9344cea9ca9e06476b1"
     },
     "compositions/hook.html": {
-      "hash": "72c524b155beaaf24c92019c3319e359456d3331a73b9a39f592bbe419e09364",
-      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\72\\72c524b155beaaf24c92019c3319e359456d3331a73b9a39f592bbe419e09364"
+      "hash": "5f70db6724bbed1e71cc62ae4a970c477378b73b30c43724ff84bae255991b8f",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\5f\\5f70db6724bbed1e71cc62ae4a970c477378b73b30c43724ff84bae255991b8f"
     },
     "compositions/stats.html": {
       "hash": "c378d6aea74acda98c6c104b1b9d4dae4516231851818ee6458269898a134889",
@@ -53,8 +53,8 @@
       "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\4c\\4c289f9e98f7d60dd20e82e5d19bf2ef2d624bac536d569e91bd8c575ffcd7e9"
     },
     "check-result.json": {
-      "hash": "793beee146cf3ab375664b9b8379a49afc3195e3348f533aec8f87328471ce96",
-      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\79\\793beee146cf3ab375664b9b8379a49afc3195e3348f533aec8f87328471ce96"
+      "hash": "e022c1548e8605a756398fbd4d4e35a3e195af599701dd360fee9c5bc6388c9a",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\e0\\e022c1548e8605a756398fbd4d4e35a3e195af599701dd360fee9c5bc6388c9a"
     }
   },
   "revisions": {
@@ -153,12 +153,31 @@
           "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\79\\793beee146cf3ab375664b9b8379a49afc3195e3348f533aec8f87328471ce96"
         }
       }
+    },
+    "4ab1502e-e57c-4c12-950e-d4a56eef9ff2": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1795363490913,
+      "endedAt": 1795363490936,
+      "files": {
+        "check-result.json": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\79\\793beee146cf3ab375664b9b8379a49afc3195e3348f533aec8f87328471ce96",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\e0\\e022c1548e8605a756398fbd4d4e35a3e195af599701dd360fee9c5bc6388c9a"
+        },
+        "compositions/hook.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\72\\72c524b155beaaf24c92019c3319e359456d3331a73b9a39f592bbe419e09364",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\5f\\5f70db6724bbed1e71cc62ae4a970c477378b73b30c43724ff84bae255991b8f"
+        }
+      }
     }
   },
   "checks": {
     "latest": {
       "revision": null,
-      "id": "d79ed47a-873f-4e96-a88c-324bc9c22bf9"
+      "id": "496f8166-3ac2-4065-91b4-d6b7b7349498"
     },
     "revisions": {
       "1dc422b5-151c-4387-ac0f-1f3d4db1c5b9": [
@@ -306,6 +325,41 @@
         "contentHash": "a7b74cd27a0a6941162d68915630654564ad14561f3f9d9669931eb29bc7beb3",
         "revision": null,
         "inputFingerprint": "96b7826083e50f732a7f8e49decbb1aaf60f61dbd55110dc7fb7cf110fe1f5ca",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      },
+      {
+        "id": "496f8166-3ac2-4065-91b4-d6b7b7349498",
+        "scope": "project",
+        "report": "C:\\Users\\abini\\Desktop\\portfolio\\brag-output-2026-05-22-143022\\composition\\.hyperframes\\artifacts\\checks\\496f8166-3ac2-4065-91b4-d6b7b7349498.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "safeZones": [
+              "tiktok",
+              "reels",
+              "shorts"
+            ],
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1795363502036,
+        "contentHash": "a7b74cd27a0a6941162d68915630654564ad14561f3f9d9669931eb29bc7beb3",
+        "revision": null,
+        "inputFingerprint": "92640df7706323732468cc47188cfa19fefbb8bed8b43655f0192a2b7a7fe68d",
         "inputScope": "local-project-files",
         "attribution": "inputs-changed"
       }
