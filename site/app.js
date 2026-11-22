@@ -210,9 +210,9 @@
       targetCharPos.set(0, -0.1, 0);
       setActivePanel('resume');
     } else {
-      // 06: CONTACT (Character framed on left, contact sheet on right)
-      targetCamPos.set(-0.8, 0.2, 4.9);
-      targetCharPos.set(-1.0, 0, 0);
+      // 06: CONTACT (Character positioned gracefully on left, contact sheet on right)
+      targetCamPos.set(-1.2, 0.2, 5.2);
+      targetCharPos.set(-1.65, -0.05, 0);
       setActivePanel('contact');
     }
   }

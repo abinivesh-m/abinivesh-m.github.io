@@ -854,41 +854,24 @@ html, body {
 .panel-contact {
   position: fixed;
   inset: 0;
+  display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 8vw;
-}
-
-.contact-frame-wrapper {
-  position: fixed;
-  left: 20vw;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 360px;
-  height: 520px;
-  pointer-events: none;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.6s ease-out;
-}
-
-.panel-contact.active .contact-frame-wrapper {
-  opacity: 1;
-}
-
-.contact-drawn-frame {
-  width: 100%;
-  height: 100%;
-}
-
-.panel-contact.active #contact-svg-rect {
-  transition: stroke-dashoffset 1.8s cubic-bezier(0.16, 1, 0.3, 1);
-  stroke-dashoffset: 0;
+  padding-right: 7vw;
 }
 
 .contact-card {
-  max-width: 580px;
+  max-width: 540px;
+  width: 100%;
   padding: 3rem 3.5rem;
+  background: rgba(14, 12, 10, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 154, 77, 0.35);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 154, 77, 0.12);
+  border-radius: 28px;
+  position: relative;
+  z-index: 10;
 }
 
 .contact-headline {
