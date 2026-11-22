@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "historyId": "64791db8-00f7-43e4-bc39-fa48bb8c0e39",
+  "currentRevision": "7e86c6b6-d247-41e8-91e4-db2775b9a4fd",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\72\\729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb"
+    },
+    "CLAUDE.md": {
+      "hash": "729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\72\\729e31835a21c7b42ee006e2aacc63016abc05d26883f871ad3bf206943f2cfb"
+    },
+    "assets/sfx/chime.mp3": {
+      "hash": "74823b1b27703c56e0652db838f503c150ce9c2442d47d27430af3d5121d6d12",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\74\\74823b1b27703c56e0652db838f503c150ce9c2442d47d27430af3d5121d6d12"
+    },
+    "assets/sfx/click-soft.mp3": {
+      "hash": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\07\\075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    "compositions/contact.html": {
+      "hash": "35f9e252f8b1fbd80a28ca53e6c9108b54fe992c54aff9344cea9ca9e06476b1",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\35\\35f9e252f8b1fbd80a28ca53e6c9108b54fe992c54aff9344cea9ca9e06476b1"
+    },
+    "compositions/hook.html": {
+      "hash": "72c524b155beaaf24c92019c3319e359456d3331a73b9a39f592bbe419e09364",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\72\\72c524b155beaaf24c92019c3319e359456d3331a73b9a39f592bbe419e09364"
+    },
+    "compositions/stats.html": {
+      "hash": "c378d6aea74acda98c6c104b1b9d4dae4516231851818ee6458269898a134889",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\c3\\c378d6aea74acda98c6c104b1b9d4dae4516231851818ee6458269898a134889"
+    },
+    "compositions/work.html": {
+      "hash": "6749447669f522a86ae92c9034ce669b792248b2ce43d71857097d93bee06f2c",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\67\\6749447669f522a86ae92c9034ce669b792248b2ce43d71857097d93bee06f2c"
+    },
+    "hyperframes.json": {
+      "hash": "35a6d4ea79ebe911f0d81705f7aace5d8ff0316b745b0311d56af50c9c237cb7",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\35\\35a6d4ea79ebe911f0d81705f7aace5d8ff0316b745b0311d56af50c9c237cb7"
+    },
+    "index.html": {
+      "hash": "639105b95cbc5bad8ebbfacb4f65f49a1fad452ca7a16e487588cc618077b757",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\63\\639105b95cbc5bad8ebbfacb4f65f49a1fad452ca7a16e487588cc618077b757"
+    },
+    "meta.json": {
+      "hash": "73fdd77b85526753c5f63754028b5a62e49cf0302bd2adae8a6ae750c737177c",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\73\\73fdd77b85526753c5f63754028b5a62e49cf0302bd2adae8a6ae750c737177c"
+    },
+    "package.json": {
+      "hash": "4c289f9e98f7d60dd20e82e5d19bf2ef2d624bac536d569e91bd8c575ffcd7e9",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\4c\\4c289f9e98f7d60dd20e82e5d19bf2ef2d624bac536d569e91bd8c575ffcd7e9"
+    },
+    "check-result.json": {
+      "hash": "793beee146cf3ab375664b9b8379a49afc3195e3348f533aec8f87328471ce96",
+      "content": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\79\\793beee146cf3ab375664b9b8379a49afc3195e3348f533aec8f87328471ce96"
+    }
+  },
+  "revisions": {
+    "1dc422b5-151c-4387-ac0f-1f3d4db1c5b9": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1795362229003,
+      "endedAt": 1795362229036,
+      "files": {
+        "compositions/contact.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\65\\65495ea9d29c11299175a941648f9c3ca0d1ba1dc926020f51f68f58730181ed",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\1f\\1f24655497477d82f46aed2c12b2ffd0fa3efb4ba57a9b42c3a648b0cdeb10ac"
+        },
+        "compositions/hook.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\fd\\fd9210d4da0eab25995930a445753600ee04b7efa198adea2f3ced85af511011",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\3b\\3b1f23ad01fbe2c4deceb50ef7787bd640a8fcbaf92751ee9629afcdf66dbbba"
+        },
+        "compositions/stats.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\a3\\a314413ffecb236e5f04a87193f5edac4dcc89fd23bffa31993a17d5c684724f",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\05\\05483576ebff344638b7cba7574274bb74a25eae755c74d475be47966ee6fc46"
+        },
+        "compositions/work.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\de\\dee13311b140c83f1f12adb14c2908f126942d5a42239fabb946859470f85a1a",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\ed\\ed2a17b866d584959eb9f5a5a0a8896fd72a8624dd024623f0f98cfe16a03978"
+        },
+        "index.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\04\\04b2d8ad7cc6a474d94b31dcdf1f36adf4adbb8557fb8f9a5338ca9f1fceacaa",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\f9\\f96e802fe0ae283860212d64862a883bbd73672a55af8d4a090fb747d2e957b7"
+        }
+      }
+    },
+    "666b54eb-6cf4-47dc-90ed-28a54a2a6a0f": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1795362433138,
+      "endedAt": 1795362433316,
+      "files": {
+        "compositions/contact.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\1f\\1f24655497477d82f46aed2c12b2ffd0fa3efb4ba57a9b42c3a648b0cdeb10ac",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\35\\35f9e252f8b1fbd80a28ca53e6c9108b54fe992c54aff9344cea9ca9e06476b1"
+        },
+        "compositions/hook.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\3b\\3b1f23ad01fbe2c4deceb50ef7787bd640a8fcbaf92751ee9629afcdf66dbbba",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\23\\23cfdd3f44ff6c57a449171377733171fc6648a9e17fdbcfc91875bf57a19fa8"
+        },
+        "compositions/stats.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\05\\05483576ebff344638b7cba7574274bb74a25eae755c74d475be47966ee6fc46",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\c3\\c378d6aea74acda98c6c104b1b9d4dae4516231851818ee6458269898a134889"
+        },
+        "compositions/work.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\ed\\ed2a17b866d584959eb9f5a5a0a8896fd72a8624dd024623f0f98cfe16a03978",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\67\\6749447669f522a86ae92c9034ce669b792248b2ce43d71857097d93bee06f2c"
+        },
+        "index.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\f9\\f96e802fe0ae283860212d64862a883bbd73672a55af8d4a090fb747d2e957b7",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\63\\639105b95cbc5bad8ebbfacb4f65f49a1fad452ca7a16e487588cc618077b757"
+        }
+      }
+    },
+    "7e4f0cfd-990f-4f63-8284-8958d23a404e": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1795362494044,
+      "endedAt": 1795362494055,
+      "files": {
+        "check-result.json": {
+          "before": null,
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\1a\\1aa0583011d4d3f5efe44196f4d6179f0b496bead43d4d087d457b5d38a6c823"
+        },
+        "compositions/hook.html": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\23\\23cfdd3f44ff6c57a449171377733171fc6648a9e17fdbcfc91875bf57a19fa8",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\72\\72c524b155beaaf24c92019c3319e359456d3331a73b9a39f592bbe419e09364"
+        }
+      }
+    },
+    "7e86c6b6-d247-41e8-91e4-db2775b9a4fd": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1795362536155,
+      "endedAt": 1795362536157,
+      "files": {
+        "check-result.json": {
+          "before": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\1a\\1aa0583011d4d3f5efe44196f4d6179f0b496bead43d4d087d457b5d38a6c823",
+          "after": "C:\\Users\\abini\\.cache\\hyperframes\\history\\64791db8-00f7-43e4-bc39-fa48bb8c0e39\\blobs\\79\\793beee146cf3ab375664b9b8379a49afc3195e3348f533aec8f87328471ce96"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "d79ed47a-873f-4e96-a88c-324bc9c22bf9"
+    },
+    "revisions": {
+      "1dc422b5-151c-4387-ac0f-1f3d4db1c5b9": [
+        {
+          "id": "daeabc55-5706-4097-bcbc-4a16e6f45924",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1795362244143,
+          "contentHash": "56af367e7e419e2bc97958c58c3d31f299724e5ccfb7cbbaa396708d2360f228",
+          "revision": "1dc422b5-151c-4387-ac0f-1f3d4db1c5b9",
+          "inputFingerprint": "4a14d14fd3b78ff3db88be100f31d7833076f60a0a3f8a1c037a72286d3fb8b1",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "cd376de9-c00e-4046-afdf-b42a16537bc7"
+        }
+      ],
+      "666b54eb-6cf4-47dc-90ed-28a54a2a6a0f": [
+        {
+          "id": "8973534b-2cec-4a47-b1f5-427a1257f218",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1795362446309,
+          "contentHash": "12cc2f5952d3ad734bd46c9cafc994772588ef4d37b931ac80619b4a29875bd4",
+          "revision": "666b54eb-6cf4-47dc-90ed-28a54a2a6a0f",
+          "inputFingerprint": "43ec604f060ada8022461e4f937b665902bfd601e9a65f802d632eab4677e0c3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "cd376de9-c00e-4046-afdf-b42a16537bc7"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "017908be-908b-4940-a7aa-c379646f5956",
+        "scope": "project",
+        "report": "C:\\Users\\abini\\Desktop\\portfolio\\brag-output-2026-05-22-143022\\composition\\.hyperframes\\artifacts\\checks\\017908be-908b-4940-a7aa-c379646f5956.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "safeZones": [
+              "tiktok",
+              "reels",
+              "shorts"
+            ],
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1795362128144,
+        "contentHash": "560d8d8ea2c91287dc69dd6e6d2d0c1eddcba871b911d393aa98dd4fe6971093",
+        "revision": null,
+        "inputFingerprint": "ebe39a27c293ce13f2f92b7103800aada225f179a4d041dbcd5a941b9a224202",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "d79ed47a-873f-4e96-a88c-324bc9c22bf9",
+        "scope": "project",
+        "report": "C:\\Users\\abini\\Desktop\\portfolio\\brag-output-2026-05-22-143022\\composition\\.hyperframes\\artifacts\\checks\\d79ed47a-873f-4e96-a88c-324bc9c22bf9.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "safeZones": [
+              "tiktok",
+              "reels",
+              "shorts"
+            ],
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1795362502116,
+        "contentHash": "a7b74cd27a0a6941162d68915630654564ad14561f3f9d9669931eb29bc7beb3",
+        "revision": null,
+        "inputFingerprint": "96b7826083e50f732a7f8e49decbb1aaf60f61dbd55110dc7fb7cf110fe1f5ca",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "cd376de9-c00e-4046-afdf-b42a16537bc7",
+      "completedAt": 1795362606659,
+      "output": "C:\\Users\\abini\\Desktop\\portfolio\\brag-output-2026-05-22-143022\\brag.mp4",
+      "status": "completed",
+      "revision": "7e86c6b6-d247-41e8-91e4-db2775b9a4fd"
+    },
+    "retainedRevisions": [
+      "7e86c6b6-d247-41e8-91e4-db2775b9a4fd"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

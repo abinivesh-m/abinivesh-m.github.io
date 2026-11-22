@@ -1,0 +1,140 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      background: var(--color-ground);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .glass {
+      width: clamp(340px, 70vw, 700px);
+      padding: clamp(1.5rem, 5vw, 3rem);
+      background: rgba(16, 12, 9, 0.62);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    .glass.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--color-accent);
+      margin-bottom: 0.75rem;
+      opacity: 0;
+    }
+    .eyebrow.visible {
+      opacity: 1;
+    }
+    h2 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      color: var(--color-ink);
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      opacity: 0;
+    }
+    h2.visible {
+      opacity: 1;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      opacity: 0;
+    }
+    .links.visible {
+      opacity: 1;
+    }
+    .link {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--color-ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-accent);
+      opacity: 0;
+    }
+    .link.visible {
+      opacity: 1;
+    }
+  </style>
+
+  <div id="root" data-composition-id="contact" data-width="1920" data-height="1080">
+    <div id="panel" class="clip glass" data-start="0" data-duration="5" data-hold="true">
+      <div id="eyebrow" class="clip eyebrow" data-start="0.3" data-duration="4.7">05 - Contact</div>
+      <h2 id="headline" class="clip" data-start="0.8" data-duration="4.2">Let's build something.</h2>
+      <div id="links-container" class="clip links" data-start="1.4" data-duration="3.6">
+        <div id="link1" class="clip link" data-start="1.4" data-duration="2.6">abinivesh.1203@gmail.com</div>
+        <div id="link2" class="clip link" data-start="2.6" data-duration="1.8">GitHub</div>
+        <div id="link3" class="clip link" data-start="3.4" data-duration="1.2">LinkedIn</div>
+        <div id="link4" class="clip link" data-start="4.2" data-duration="0.8">LeetCode</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo(
+      "#panel",
+      { opacity: 0, y: 24 },
+      { opacity: 1, y: 0, duration: 0.5, ease: "power4.out" },
+      0
+    );
+
+    tl.fromTo(
+      "#eyebrow",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.3, ease: "power2.out" },
+      0.3
+    );
+
+    tl.fromTo(
+      "#headline",
+      { opacity: 0, y: 10 },
+      { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+      0.8
+    );
+
+    tl.fromTo(
+      "#link1",
+      { opacity: 0, y: 12 },
+      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
+      1.4
+    );
+
+    tl.fromTo(
+      "#link2",
+      { opacity: 0, y: 12 },
+      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
+      2.6
+    );
+
+    tl.fromTo(
+      "#link3",
+      { opacity: 0, y: 12 },
+      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
+      3.4
+    );
+
+    tl.fromTo(
+      "#link4",
+      { opacity: 0, y: 12 },
+      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
+      4.2
+    );
+
+    window.__timelines["contact"] = tl;
+  </script>
+</template>

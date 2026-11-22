@@ -1,0 +1,154 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      background: var(--color-ground);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .glass {
+      width: clamp(340px, 70vw, 700px);
+      padding: clamp(1.5rem, 5vw, 3rem);
+      background: rgba(16, 12, 9, 0.62);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    .glass.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--color-accent);
+      margin-bottom: 0.75rem;
+      opacity: 0;
+    }
+    .eyebrow.visible {
+      opacity: 1;
+    }
+    h2 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      color: var(--color-ink);
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      opacity: 0;
+    }
+    h2.visible {
+      opacity: 1;
+    }
+    .stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      opacity: 0;
+    }
+    .stats.visible {
+      opacity: 1;
+    }
+    .stat {
+      text-align: left;
+    }
+    .stat-value {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      color: var(--color-ink);
+      line-height: 1;
+      opacity: 0;
+    }
+    .stat-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted, #a39b91);
+      opacity: 0;
+    }
+    .stat.visible .stat-value,
+    .stat.visible .stat-label {
+      opacity: 1;
+    }
+  </style>
+
+  <div id="root" data-composition-id="stats" data-width="1920" data-height="1080">
+    <div id="panel" class="clip glass" data-start="0" data-duration="5" data-hold="true">
+      <div id="eyebrow" class="clip eyebrow" data-start="0.3" data-duration="4.7">01 - About</div>
+      <h2 id="headline" class="clip" data-start="0.8" data-duration="4.2">I build AI products that ship.</h2>
+      <div id="stats-container" class="clip stats" data-start="1.4" data-duration="3.6">
+        <div id="stat1" class="clip stat" data-start="1.4" data-duration="3.2">
+          <div class="stat-value">113</div>
+          <div class="stat-label">LeetCode</div>
+        </div>
+        <div id="stat2" class="clip stat" data-start="2.4" data-duration="2.6">
+          <div class="stat-value">3×</div>
+          <div class="stat-label">Hackathon wins</div>
+        </div>
+        <div id="stat3" class="clip stat" data-start="3.4" data-duration="1.6">
+          <div class="stat-value">2×</div>
+          <div class="stat-label">IIT finals</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo(
+      "#panel",
+      { opacity: 0, y: 24 },
+      { opacity: 1, y: 0, duration: 0.5, ease: "power4.out" },
+      0
+    );
+
+    tl.fromTo(
+      "#eyebrow",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.3, ease: "power2.out" },
+      0.3
+    );
+
+    tl.fromTo(
+      "#headline",
+      { opacity: 0, y: 10 },
+      { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+      0.8
+    );
+
+    tl.fromTo(
+      "#stat1",
+      { opacity: 0, y: 12 },
+      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
+      1.4
+    );
+
+    tl.fromTo(
+      "#stat2",
+      { opacity: 0, y: 12 },
+      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
+      2.4
+    );
+
+    tl.fromTo(
+      "#stat3",
+      { opacity: 0, y: 12 },
+      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
+      3.4
+    );
+
+    window.__timelines["stats"] = tl;
+  </script>
+</template>
