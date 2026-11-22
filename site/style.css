@@ -506,6 +506,21 @@ html, body {
   padding-top: 5rem;
   align-items: flex-start;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) rgba(0, 0, 0, 0.4);
+}
+
+.panel-work::-webkit-scrollbar {
+  width: 6px;
+}
+
+.panel-work::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.panel-work::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
 }
 
 .work-container {
@@ -837,7 +852,8 @@ html, body {
 
 /* Section 6: CONTACT */
 .panel-contact {
-  position: relative;
+  position: fixed;
+  inset: 0;
   align-items: center;
   justify-content: flex-end;
   padding-right: 8vw;

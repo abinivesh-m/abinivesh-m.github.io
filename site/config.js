@@ -24,7 +24,7 @@ window.CONFIG = {
       id: "skillnexus",
       title: "SkillNexus AI",
       tagline: "6-Agent Career Orchestration Platform",
-      award: "🏆 1st Place Winner (₹20,000) — PromptWars 2026",
+      award: "1st Place Winner (₹20,000) — PromptWars 2026",
       desc: "Architected a 6-agent LLM swarm (Profile, Gap, Curriculum, Resource, Assessor, Mentor) with deterministic weighted readiness scoring and DAG prerequisite sequencing. Includes counterfactual what-if simulation.",
       tech: ["Python", "FastAPI", "LLM Swarm", "Docker", "Cloud Run"],
       github: "https://github.com/abinivesh-m/Skillnexus-ai",
@@ -35,7 +35,7 @@ window.CONFIG = {
       id: "nexus-shield",
       title: "NexusShield",
       tagline: "AI Scam Detection Engine",
-      award: "🛡️ 38/38 Passing CI/CD Tests",
+      award: "38/38 Passing CI/CD Tests",
       desc: "Scam detection engine scoring internship/job offers 0–100 with red-flag explanations, employer domain verification, and tamper-evident HMAC-SHA256 cryptographic public receipts.",
       tech: ["Flutter", "FastAPI", "PostgreSQL", "Google Gemini", "HMAC-SHA256"],
       github: "https://github.com/abinivesh-m/Nexus-Shield",
@@ -46,7 +46,7 @@ window.CONFIG = {
       id: "trackx",
       title: "TrackX",
       tagline: "City-Wide ANPR Vehicle Intelligence",
-      award: "🚗 SIH 2026 BEL Problem (Top 50 of 750)",
+      award: "SIH 2026 BEL Problem (Top 50 of 750)",
       desc: "Vehicle tracking pipeline fusing plate OCR, vehicle appearance, GPS, and timestamp from existing CCTV infrastructure. Real-time ONNX model inference served via FastAPI with React dashboard.",
       tech: ["Python", "OpenCV", "ONNX", "FastAPI", "React"],
       github: "https://github.com/abinivesh-m/TrackX",
@@ -56,33 +56,33 @@ window.CONFIG = {
       id: "roadsos",
       title: "RoadSOS",
       tagline: "Driver Safety & Emergency Response",
-      award: "🏅 National Finalist — IIT Madras (15,000+ regs)",
+      award: "National Finalist — IIT Madras (15,000+ regs)",
       desc: "Real-time driver monitoring detecting phone usage via YOLOv8 and drowsiness via MediaPipe Eye Aspect Ratio with automated GPS SOS countdown alert pipeline.",
       tech: ["Python", "YOLOv8", "MediaPipe", "Streamlit", "GPS"],
       github: "https://github.com/abinivesh-m/RoadSOS-AI",
-      image: "media/screenshot-trackx.png"
+      image: "media/screenshot-roadsos.png"
     },
     {
       id: "waterlog",
       title: "Waterlog Watch",
       tagline: "AI Flood Alerts on Serverless AWS",
-      award: "⚡ 100% Serverless AWS Architecture",
+      award: "100% Serverless AWS Architecture",
       desc: "Crowd-sourced AI-verified street flooding alerts. Multimodal vision assessment with Bedrock and Gemini fallback, DynamoDB geohash spatial queries, and real-time vehicle route checks.",
       tech: ["Flutter", "AWS Lambda", "DynamoDB", "Bedrock", "Location Service"],
       github: "https://github.com/abinivesh-m/waterlog-watch",
       live: "https://lwj4clgh53.execute-api.ap-south-1.amazonaws.com/dashboard",
-      image: "media/screenshot-nexus.png"
+      image: "media/screenshot-waterlog.png"
     },
     {
       id: "dejavu",
       title: "Deja Vu",
       tagline: "On-Call SRE Agent with Memory",
-      award: "🧠 97% Incident Recall vs 31% Baseline",
+      award: "97% Incident Recall vs 31% Baseline",
       desc: "SRE incident response agent with long-term episodic memory using Hindsight + Groq. Automatically cites prior incident fix histories to diagnose production alerts instantly.",
       tech: ["Python", "FastAPI", "Hindsight", "Groq"],
       github: "https://github.com/abinivesh-m/dejavu",
       live: "https://dejavu-tau.vercel.app",
-      image: "media/screenshot-skillnexus.png"
+      image: "media/screenshot-dejavu.png"
     }
   ],
 
