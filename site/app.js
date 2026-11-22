@@ -441,6 +441,42 @@
     }
 
     setTimeout(init3DCardTilt, 200);
+    initImageLightbox();
+  }
+
+  function initImageLightbox() {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+    const backdrop = document.getElementById('lightbox-backdrop');
+
+    if (!lightbox || !lightboxImg) return;
+
+    document.querySelectorAll('.project-img-wrap').forEach(wrap => {
+      wrap.setAttribute('title', 'Click to zoom in');
+      wrap.addEventListener('click', () => {
+        const img = wrap.querySelector('.project-img');
+        if (img) {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt || 'Project Preview';
+          lightbox.classList.add('active');
+          lightbox.setAttribute('aria-hidden', 'false');
+        }
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (backdrop) backdrop.addEventListener('click', closeLightbox);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
   }
 
 })();

@@ -40,7 +40,7 @@ window.CONFIG = {
       tech: ["Flutter", "FastAPI", "PostgreSQL", "Google Gemini", "HMAC-SHA256"],
       github: "https://github.com/abinivesh-m/Nexus-Shield",
       live: "https://github.com/abinivesh-m/Nexus-Shield/releases/latest",
-      image: "media/screenshot-nexusshield-v2.png"
+      image: "media/screenshot-nexusshield-zoomed.png"
     },
     {
       id: "trackx",
