@@ -1,25 +1,20 @@
-const cfg = window.CONFIG;
 const SEGMENTS = [
-  { id: 'intro', t: [0, 7.6], h: 100 },
-  { id: 'about', t: [7.6, 14.6], h: 100 },
-  { id: 'work', t: [14.6, 26.5], h: 100 },
-  { id: 'skills', t: [26.5, 37.5], h: 100 },
-  { id: 'resume', t: [37.5, 42.3], h: 100 },
-  { id: 'contact', t: [42.3, 46], h: 100 },
+  { id: 'intro', t: [0, 7.6] },
+  { id: 'about', t: [7.6, 14.6] },
+  { id: 'work', t: [14.6, 26.5] },
+  { id: 'skills', t: [26.5, 37.5] },
+  { id: 'resume', t: [37.5, 42.3] },
+  { id: 'contact', t: [42.3, 46] },
 ];
 
 const panels = document.querySelectorAll('.panel');
 const progressFill = document.getElementById('progress-fill');
 
-function scrollToTime(y, max) {
-  const p = Math.min(1, Math.max(0, y / max));
-  return p * 46;
-}
-
 function updateUI() {
   const scrollY = window.scrollY;
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const t = scrollToTime(scrollY, maxScroll);
+  if (maxScroll <= 0) return;
+  const t = Math.min(46, (scrollY / maxScroll) * 46);
   const pct = (scrollY / maxScroll) * 100;
   progressFill.style.width = pct + '%';
 
@@ -31,9 +26,7 @@ function updateUI() {
   });
 }
 
-window.addEventListener('scroll', () => {
-  updateUI();
-});
+window.addEventListener('scroll', updateUI, { passive: true });
 
 window.addEventListener('load', () => {
   document.getElementById('loader').classList.add('loader-hidden');
