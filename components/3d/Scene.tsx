@@ -11,7 +11,7 @@ import Floor from './Floor'
 
 export default function Scene() {
   return (
-    <div className="fixed inset-0 z-0 bg-navy">
+    <div className="fixed inset-0 z-0 bg-navy pointer-events-none">
       <Canvas
         camera={{ position: [0, 1.5, 7.5], fov: 58 }}
         shadows

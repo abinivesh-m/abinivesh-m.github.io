@@ -16,11 +16,11 @@ const Scene = dynamic(() => import('@/components/3d/Scene'), {
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-navy">
+    <main className="relative min-h-screen bg-navy overflow-y-auto">
       <NavBar />
       <Scene />
 
-      <section id="about" className="section-shell">
+      <section id="about" className="section-shell relative z-10">
         <div className="max-w-4xl glass rounded-3xl p-8 md:p-12">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">
             About
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="section-shell">
+      <section id="work" className="section-shell relative z-10">
         <div className="max-w-7xl glass rounded-3xl p-8 md:p-12">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">
             Work
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="experience" className="section-shell">
+      <section id="experience" className="section-shell relative z-10">
         <div className="max-w-7xl glass rounded-3xl p-8 md:p-12">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="achievements" className="section-shell">
+      <section id="achievements" className="section-shell relative z-10">
         <div className="max-w-5xl glass rounded-3xl p-8 md:p-12">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">
             Achievements
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="section-shell">
+      <section id="contact" className="section-shell relative z-10">
         <div className="max-w-3xl glass rounded-3xl p-8 md:p-12 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">
             Contact
