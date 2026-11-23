@@ -27,7 +27,8 @@
   // CINEMATIC SCROLL-SCRUBBING FILM ENGINE (Page 14 Visual Guide: Blob URL)
   // ==========================================================================
   const film = document.getElementById('film');
-  const videoSrc = (window.innerWidth <= 760) ? 'media/film_mobile.mp4' : 'media/film.mp4';
+  const cacheKey = '?v=20261123_1080p_v3';
+  const videoSrc = ((window.innerWidth <= 760) ? 'media/film_mobile.mp4' : 'media/film.mp4') + cacheKey;
   let targetFilmTime = 0;
   let currentFilmTime = 0;
   let isFilmReady = false;
@@ -220,34 +221,37 @@
     scrollProgressVal = Math.max(0, Math.min(1, window.scrollY / docHeight));
     if (scrollProgress) scrollProgress.style.width = (scrollProgressVal * 100) + '%';
 
+    // Desktop: Shift film slightly right during intro so character stands right of intro text
+    if (window.innerWidth > 760 && film) {
+      if (scrollProgressVal < 0.16) {
+        film.style.transform = 'scale(1.08) translateX(10vw)';
+      } else {
+        film.style.transform = 'scale(1.08) translateX(0vw)';
+      }
+    }
+
     // 6-Section Camera & Character Choreography in 3D Space
     if (scrollProgressVal < 0.16) {
-      // 01: INTRO (Character stands right, camera looks at torso)
       targetCamPos.set(1.4, 0.2, 5.2);
       targetCharPos.set(1.1, 0, 0);
       setActivePanel('intro');
     } else if (scrollProgressVal < 0.33) {
-      // 02: ABOUT (Camera zooms in smoothly for an intimate perspective)
       targetCamPos.set(0.8, 0.3, 4.3);
       targetCharPos.set(0.9, -0.05, 0);
       setActivePanel('about');
     } else if (scrollProgressVal < 0.55) {
-      // 03: WORK (Camera elevates and pulls back; character centers at desk level)
       targetCamPos.set(0, 0.5, 5.8);
       targetCharPos.set(0, -0.2, 0);
       setActivePanel('work');
     } else if (scrollProgressVal < 0.72) {
-      // 04: SKILLS (Character shifts left to showcase floating skills on the right)
       targetCamPos.set(-0.9, 0.2, 4.8);
       targetCharPos.set(-1.1, 0, 0);
       setActivePanel('skills');
     } else if (scrollProgressVal < 0.88) {
-      // 05: RÉSUMÉ (Camera centers with dramatic depth)
       targetCamPos.set(0, 0.3, 5.0);
       targetCharPos.set(0, -0.1, 0);
       setActivePanel('resume');
     } else {
-      // 06: CONTACT (Character positioned gracefully on left, contact sheet on right)
       targetCamPos.set(-1.2, 0.2, 5.2);
       targetCharPos.set(-1.65, -0.05, 0);
       setActivePanel('contact');
@@ -273,13 +277,32 @@
     });
   }
 
-  // --- Nav Click Smooth Scroll ---
-  navLinks.forEach((link, idx) => {
+  // --- Universal Anchor Click Smooth Scroll (Every button works reliably) ---
+  const sectionProgressMap = {
+    'intro': 0.0,
+    'about': 0.22,
+    'work': 0.45,
+    'skills': 0.68,
+    'resume': 0.84,
+    'contact': 0.98
+  };
+
+  function scrollToSection(id) {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = sectionProgressMap[id] !== undefined ? sectionProgressMap[id] : 0;
+    window.scrollTo({
+      top: progress * docHeight,
+      behavior: 'smooth'
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const targetScroll = (idx / (navLinks.length - 1)) * docHeight;
-      window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+      const targetId = link.getAttribute('href').replace('#', '');
+      if (targetId) {
+        scrollToSection(targetId);
+      }
     });
   });
 
@@ -299,17 +322,14 @@
     const delta = clock.getDelta();
     const elapsed = clock.getElapsedTime();
 
-    // Cinematic Video Scroll-Scrubbing (60 FPS Intra-Keyframe Seek)
-    if (film && isFilmReady) {
+    // Cinematic Video Scroll-Scrubbing (Hardware-throttled seek)
+    if (film && isFilmReady && !film.seeking) {
       const filmDur = film.duration || 40.12;
       targetFilmTime = scrollProgressVal * filmDur;
       const diff = targetFilmTime - currentFilmTime;
-      if (Math.abs(diff) > 0.003) {
-        currentFilmTime += diff * 0.28;
+      if (Math.abs(diff) > 0.01) {
+        currentFilmTime += diff * 0.25;
         film.currentTime = Math.max(0, Math.min(filmDur, currentFilmTime));
-      }
-      if (characterMesh && characterMesh.visible) {
-        characterMesh.visible = false;
       }
     }
 
@@ -393,42 +413,117 @@
       `).join('');
     }
 
-    // Projects (Clean SVGs, no emojis)
+    // Projects Spotlight Showcase with Interactive Tabs (Leaves laptop/desk 100% visible)
+    const projectTabs = document.getElementById('project-tabs');
     const projectsDeck = document.getElementById('projects-deck');
-    if (projectsDeck && cfg.projects) {
-      projectsDeck.innerHTML = cfg.projects.map(p => {
-        // Strip any emojis from award string
-        const cleanAward = p.award.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '').trim();
+    let activeProjectIdx = 0;
 
-        return `
-          <article class="project-card">
-            <div class="project-img-wrap">
+    function renderActiveProject(idx) {
+      activeProjectIdx = idx;
+      const p = cfg.projects[idx];
+      const cleanAward = p.award.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '').trim();
+
+      if (projectTabs) {
+        projectTabs.querySelectorAll('.project-tab').forEach((tab, i) => {
+          if (i === idx) tab.classList.add('active');
+          else tab.classList.remove('active');
+        });
+      }
+
+      if (projectsDeck) {
+        projectsDeck.innerHTML = `
+          <article class="project-card spotlight-card">
+            <div class="project-img-wrap" title="Click to zoom in">
               <img src="${p.image}" alt="${p.title}" class="project-img" loading="lazy">
               <span class="project-award">${cleanAward}</span>
+              <div class="zoom-hint">Click image to zoom</div>
             </div>
             <div class="project-body">
-              <h3 class="project-title">${p.title}</h3>
-              <div class="project-tagline">${p.tagline}</div>
+              <div class="project-top-row">
+                <h3 class="project-title">${p.title}</h3>
+                <span class="project-badge">${p.tagline}</span>
+              </div>
               <p class="project-desc">${p.desc}</p>
               <div class="project-tech">
                 ${p.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
               </div>
-              <div class="project-links">
-                ${p.live ? `
-                  <a href="${p.live}" target="_blank" rel="noreferrer" class="project-link">
-                    <span>Live Demo</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              <div class="project-footer">
+                <div class="project-links">
+                  ${p.live ? `
+                    <a href="${p.live}" target="_blank" rel="noreferrer" class="project-btn primary">
+                      <span>Live Demo</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    </a>
+                  ` : ''}
+                  <a href="${p.github}" target="_blank" rel="noreferrer" class="project-btn secondary">
+                    <span>Source Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                   </a>
-                ` : ''}
-                <a href="${p.github}" target="_blank" rel="noreferrer" class="project-link">
-                  <span>Source Code</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                </a>
+                </div>
+                <div class="project-nav-buttons">
+                  <button type="button" class="project-nav-btn" id="prev-project-btn" aria-label="Previous Project">←</button>
+                  <span class="project-counter">${idx + 1} / ${cfg.projects.length}</span>
+                  <button type="button" class="project-nav-btn" id="next-project-btn" aria-label="Next Project">→</button>
+                </div>
               </div>
             </div>
           </article>
         `;
-      }).join('');
+
+        // Image zoom click
+        const imgWrap = projectsDeck.querySelector('.project-img-wrap');
+        if (imgWrap) {
+          imgWrap.addEventListener('click', () => {
+            const lightbox = document.getElementById('image-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            if (lightbox && lightboxImg) {
+              lightboxImg.src = p.image;
+              lightboxImg.alt = p.title;
+              lightbox.classList.add('active');
+            }
+          });
+        }
+
+        // Prev / Next button click handlers
+        const prevBtn = document.getElementById('prev-project-btn');
+        const nextBtn = document.getElementById('next-project-btn');
+        if (prevBtn) {
+          prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const prev = (activeProjectIdx - 1 + cfg.projects.length) % cfg.projects.length;
+            renderActiveProject(prev);
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const next = (activeProjectIdx + 1) % cfg.projects.length;
+            renderActiveProject(next);
+          });
+        }
+      }
+    }
+
+    if (projectTabs && cfg.projects) {
+      projectTabs.innerHTML = cfg.projects.map((p, i) => `
+        <button type="button" class="project-tab ${i === 0 ? 'active' : ''}" data-idx="${i}">
+          ${p.title.split(' ')[0]}
+        </button>
+      `).join('');
+
+      projectTabs.querySelectorAll('.project-tab').forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          const idx = parseInt(tab.getAttribute('data-idx'), 10);
+          renderActiveProject(idx);
+        });
+      });
+    }
+
+    if (cfg.projects && cfg.projects.length > 0) {
+      renderActiveProject(0);
     }
 
     // Skills
