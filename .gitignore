@@ -10,6 +10,12 @@ brag-output-*/
 node_modules/
 tools/
 
+# Raw video processing work files
+clips/
+clips_norm/
+film_master.mp4
+site/media/timing_check/
+
 # OS
 .DS_Store
 Thumbs.db

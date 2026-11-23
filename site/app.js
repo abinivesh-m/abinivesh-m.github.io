@@ -38,7 +38,29 @@
   populateContent();
 
   // ==========================================================================
-  // THREE.JS 3D INTERACTIVE STAGE & REAL-TIME CHARACTER
+  // CINEMATIC SCROLL-SCRUBBING FILM ENGINE (All intra-keyframes -g 1)
+  // ==========================================================================
+  const film = document.getElementById('film');
+  let targetFilmTime = 0;
+  let currentFilmTime = 0;
+  let isFilmReady = false;
+
+  if (film) {
+    const initFilm = () => {
+      isFilmReady = true;
+      film.currentTime = 0;
+      film.pause();
+      if (characterMesh) {
+        characterMesh.visible = false;
+      }
+    };
+    film.addEventListener('loadedmetadata', initFilm);
+    film.addEventListener('canplay', initFilm);
+    if (film.readyState >= 1) initFilm();
+  }
+
+  // ==========================================================================
+  // THREE.JS 3D INTERACTIVE STAGE & REAL-TIME PARTICLES
   // ==========================================================================
   const canvas = document.getElementById('stage-3d');
   if (!canvas || typeof THREE === 'undefined') {
@@ -261,6 +283,20 @@
 
     const delta = clock.getDelta();
     const elapsed = clock.getElapsedTime();
+
+    // Cinematic Video Scroll-Scrubbing (60 FPS Intra-Keyframe Seek)
+    if (film && isFilmReady) {
+      const filmDur = film.duration || 40.12;
+      targetFilmTime = scrollProgressVal * filmDur;
+      const diff = targetFilmTime - currentFilmTime;
+      if (Math.abs(diff) > 0.003) {
+        currentFilmTime += diff * 0.28;
+        film.currentTime = Math.max(0, Math.min(filmDur, currentFilmTime));
+      }
+      if (characterMesh && characterMesh.visible) {
+        characterMesh.visible = false;
+      }
+    }
 
     // Smooth Mouse Coordinates Lerp (Inertia physics)
     mouseX += (targetMouseX - mouseX) * 0.08;

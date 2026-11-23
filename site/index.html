@@ -46,8 +46,12 @@
     </div>
   </header>
 
-  <!-- Fullscreen 3D Interactive Stage -->
+  <!-- Fullscreen 3D & Cinematic Video Stage -->
   <div class="stage" id="stage">
+    <video id="film" class="stage-film" playsinline muted preload="auto" poster="media/poster.jpg">
+      <source src="media/film.mp4" type="video/mp4" media="(min-width: 761px)">
+      <source src="media/film_mobile.mp4" type="video/mp4">
+    </video>
     <canvas id="stage-3d" class="stage-3d"></canvas>
     <div class="stage-vignette"></div>
   </div>
