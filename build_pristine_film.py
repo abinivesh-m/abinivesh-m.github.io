@@ -4,18 +4,17 @@ print("Starting Master Pristine Film Compilation with AI Clip 6...")
 t0 = time.time()
 
 # High-fidelity filter chain:
-# - Clips 0-4: Scale to 2064:1161 & crop to 1920:1080 (eliminates Kling watermark)
-# - Clip 4 (clip5.mp4): Trimmed to 4.0s to eliminate the end distortion
+# - Clips 0-3: Scale to 2064:1161 & crop to 1920:1080 (eliminates Kling watermark), denoise + CAS 0.50 + contrast punch
+# - Clip 4 (clip5.mp4): Trimmed to 4.0s to eliminate end distortion, enhanced similarly
 # - Clip 5 (clip6.mp4 from Hailuo 2.5K): Scale to 2200:1238 & crop to 1920:1080 (eliminates Hailuo watermark)
-# - Lanczos interpolation + subtle CAS 0.30 for crisp, pristine 1080p
 # - Strict 24 fps cinematic cadence and all-intra (-g 1) keyframing
 filter_str = (
-    "[0:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v0];"
-    "[1:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v1];"
-    "[2:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v2];"
-    "[3:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v3];"
-    "[4:v]trim=duration=4.0,setpts=PTS-STARTPTS,scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v4];"
-    "[5:v]scale=2200:1238:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v5];"
+    "[0:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,hqdn3d=1.5:1.5:3:3,cas=strength=0.45,eq=contrast=1.05:saturation=1.04,fps=24,format=yuv420p[v0];"
+    "[1:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,hqdn3d=1.5:1.5:3:3,cas=strength=0.45,eq=contrast=1.05:saturation=1.04,fps=24,format=yuv420p[v1];"
+    "[2:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,hqdn3d=1.5:1.5:3:3,cas=strength=0.50,eq=contrast=1.06:saturation=1.05,fps=24,format=yuv420p[v2];"
+    "[3:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,hqdn3d=1.5:1.5:3:3,cas=strength=0.50,eq=contrast=1.06:saturation=1.05,fps=24,format=yuv420p[v3];"
+    "[4:v]trim=duration=4.0,setpts=PTS-STARTPTS,scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,hqdn3d=1.5:1.5:3:3,cas=strength=0.50,eq=contrast=1.06:saturation=1.05,fps=24,format=yuv420p[v4];"
+    "[5:v]scale=2200:1238:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.25,fps=24,format=yuv420p[v5];"
     "[v0][v1]xfade=transition=fade:duration=0.25:offset=5.38[x01];"
     "[x01][v2]xfade=transition=fade:duration=0.25:offset=10.76[x02];"
     "[x02][v3]xfade=transition=fade:duration=0.25:offset=18.55[x03];"

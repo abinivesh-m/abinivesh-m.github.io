@@ -27,7 +27,7 @@
   // CINEMATIC SCROLL-SCRUBBING FILM ENGINE (Page 14 Visual Guide: Blob URL)
   // ==========================================================================
   const film = document.getElementById('film');
-  const cacheKey = '?v=20261123_1080p_v3';
+  const cacheKey = '?v=20261123_topnotch_v1';
   const videoSrc = ((window.innerWidth <= 760) ? 'media/film_mobile.mp4' : 'media/film.mp4') + cacheKey;
   let targetFilmTime = 0;
   let currentFilmTime = 0;
@@ -159,6 +159,7 @@
   // Character group for camera target tracking
   const characterGroup = new THREE.Group();
   scene.add(characterGroup);
+  let characterMesh = null;
 
   // --- Volumetric 3D Floating Particles ---
   const particleCount = 650;
@@ -224,9 +225,9 @@
     // Desktop: Shift film slightly right during intro so character stands right of intro text
     if (window.innerWidth > 760 && film) {
       if (scrollProgressVal < 0.16) {
-        film.style.transform = 'scale(1.08) translateX(10vw)';
+        film.style.transform = 'scale(1) translateX(10vw)';
       } else {
-        film.style.transform = 'scale(1.08) translateX(0vw)';
+        film.style.transform = 'scale(1) translateX(0vw)';
       }
     }
 
@@ -324,7 +325,7 @@
 
     // Cinematic Video Scroll-Scrubbing (Hardware-throttled seek)
     if (film && isFilmReady && !film.seeking) {
-      const filmDur = film.duration || 40.12;
+      const filmDur = film.duration || 36.67;
       targetFilmTime = scrollProgressVal * filmDur;
       const diff = targetFilmTime - currentFilmTime;
       if (Math.abs(diff) > 0.01) {
