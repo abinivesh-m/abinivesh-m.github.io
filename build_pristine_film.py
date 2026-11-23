@@ -1,26 +1,25 @@
 import subprocess, time, sys
 
-print("Starting Pristine 1080p Film Compilation (Watermark-Free, Crisp Lanczos, All-Intra)...")
+print("Starting Pristine 1080p Film Compilation (Clip 5 Trimmed, Zero Distortion, Watermark-Free)...")
 t0 = time.time()
 
 # High-fidelity filter chain:
-# 1. Scale to 2064:1161 and crop to 1920:1080 to cleanly eliminate any AI corner watermark without CSS zoom
-# 2. Lanczos interpolation for razor-sharp 1080p rendering
-# 3. Subtle CAS (0.30) to enhance texture and edges without noisy halos
-# 4. Strict 24 fps cadence for cinematic fluidity
-# 5. Seamless 0.25s cross-fades
+# - Clip 5 trimmed to 4.0s to cleanly eliminate the last 2 seconds of AI face drift
+# - Lanczos 7% scale & crop (2064:1161 -> 1920:1080) for 100% watermark elimination
+# - Subtle CAS (0.30) for natural, high-definition clarity without noise halos
+# - Seamless crossfades at exact mathematical offsets
 filter_str = (
     "[0:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v0];"
     "[1:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v1];"
     "[2:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v2];"
     "[3:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v3];"
-    "[4:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v4];"
+    "[4:v]trim=duration=4.0,setpts=PTS-STARTPTS,scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v4];"
     "[5:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v5];"
     "[v0][v1]xfade=transition=fade:duration=0.25:offset=5.38[x01];"
     "[x01][v2]xfade=transition=fade:duration=0.25:offset=10.76[x02];"
     "[x02][v3]xfade=transition=fade:duration=0.25:offset=18.55[x03];"
     "[x03][v4]xfade=transition=fade:duration=0.25:offset=26.34[x04];"
-    "[x04][v5]xfade=transition=fade:duration=0.25:offset=32.13[outv]"
+    "[x04][v5]xfade=transition=fade:duration=0.25:offset=30.09[outv]"
 )
 
 cmd_master = [
