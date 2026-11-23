@@ -13,7 +13,9 @@ tools/
 # Raw video processing work files
 clips/
 clips_norm/
+clips_1080p/
 film_master.mp4
+film_master_1080p.mp4
 site/media/timing_check/
 
 # OS

@@ -20,47 +20,96 @@
   const panels = document.querySelectorAll('.panel');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  let loadProgress = 0;
-  const loadInterval = setInterval(() => {
-    loadProgress += Math.floor(Math.random() * 20) + 15;
-    if (loadProgress >= 100) {
-      loadProgress = 100;
-      clearInterval(loadInterval);
-      setTimeout(() => {
-        loader.classList.add('loaded');
-      }, 350);
-    }
-    if (loaderBar) loaderBar.style.width = loadProgress + '%';
-    if (loaderPercent) loaderPercent.textContent = loadProgress + '%';
-  }, 80);
-
   // --- Populate DOM Content with ZERO Emojis ---
   populateContent();
 
   // ==========================================================================
-  // CINEMATIC SCROLL-SCRUBBING FILM ENGINE (All intra-keyframes -g 1)
+  // CINEMATIC SCROLL-SCRUBBING FILM ENGINE (Page 14 Visual Guide: Blob URL)
   // ==========================================================================
   const film = document.getElementById('film');
+  const videoSrc = (window.innerWidth <= 760) ? 'media/film_mobile.mp4' : 'media/film.mp4';
   let targetFilmTime = 0;
   let currentFilmTime = 0;
   let isFilmReady = false;
 
-  if (film) {
-    const initFilm = () => {
-      isFilmReady = true;
-      film.currentTime = 0;
-      film.pause();
-      if (characterMesh) {
-        characterMesh.visible = false;
-      }
-    };
-    film.addEventListener('loadedmetadata', initFilm);
-    film.addEventListener('canplay', initFilm);
-    if (film.readyState >= 1) initFilm();
+  function loadFilmBlob() {
+    fetch(videoSrc)
+      .then(res => {
+        if (!res.ok) throw new Error('Direct fetch failed');
+        const contentLength = res.headers.get('content-length');
+        const total = contentLength ? parseInt(contentLength, 10) : 0;
+        let loaded = 0;
+
+        const reader = res.body.getReader();
+        return new Response(new ReadableStream({
+          start(controller) {
+            function pump() {
+              return reader.read().then(({ done, value }) => {
+                if (done) {
+                  controller.close();
+                  return;
+                }
+                loaded += value.byteLength;
+                if (total && loaderBar && loaderPercent) {
+                  const pct = Math.min(100, Math.round((loaded / total) * 100));
+                  loaderBar.style.width = pct + '%';
+                  loaderPercent.textContent = pct + '%';
+                }
+                controller.enqueue(value);
+                return pump();
+              });
+            }
+            return pump();
+          }
+        })).blob();
+      })
+      .then(blob => {
+        const blobUrl = URL.createObjectURL(blob);
+        if (film) {
+          film.src = blobUrl;
+          film.load();
+          film.addEventListener('loadedmetadata', onFilmMetadata, { once: true });
+        }
+      })
+      .catch(() => {
+        // Fallback to direct src if fetch is blocked
+        if (film) {
+          film.src = videoSrc;
+          film.load();
+          film.addEventListener('loadedmetadata', onFilmMetadata, { once: true });
+        }
+      });
   }
 
+  function onFilmMetadata() {
+    isFilmReady = true;
+    film.currentTime = 0;
+    film.pause();
+    if (loaderBar) loaderBar.style.width = '100%';
+    if (loaderPercent) loaderPercent.textContent = '100%';
+    setTimeout(() => {
+      if (loader) loader.classList.add('loaded');
+    }, 200);
+  }
+
+  // Start blob preloading
+  if (film) {
+    loadFilmBlob();
+  } else {
+    setTimeout(() => {
+      if (loader) loader.classList.add('loaded');
+    }, 400);
+  }
+
+  // iOS / Mobile first-touch unlock for smooth scrubbing
+  document.addEventListener('touchstart', () => {
+    if (film) {
+      film.play().then(() => film.pause()).catch(() => {});
+    }
+  }, { once: true });
+
   // ==========================================================================
-  // THREE.JS 3D INTERACTIVE STAGE & REAL-TIME PARTICLES
+  // THREE.JS 3D INTERACTIVE STAGE & REAL-TIME PARTICLES (Atmosphere & Lights)
   // ==========================================================================
   const canvas = document.getElementById('stage-3d');
   if (!canvas || typeof THREE === 'undefined') {
@@ -106,43 +155,9 @@
   topLight.penumbra = 0.8;
   scene.add(topLight);
 
-  // --- 3D Character Plane ---
-  const textureLoader = new THREE.TextureLoader();
-  let characterMesh = null;
+  // Character group for camera target tracking
   const characterGroup = new THREE.Group();
   scene.add(characterGroup);
-
-  textureLoader.load('media/character_cutout.png', (tex) => {
-    tex.colorSpace = THREE.SRGBColorSpace;
-    tex.generateMipmaps = true;
-    tex.minFilter = THREE.LinearMipmapLinearFilter;
-
-    // Aspect ratio calculation (cutout is ~1000x1500)
-    const aspect = tex.image.width / tex.image.height;
-    const height = 3.6;
-    const width = height * aspect;
-
-    const geo = new THREE.PlaneGeometry(width, height, 32, 32);
-    const mat = new THREE.MeshStandardMaterial({
-      map: tex,
-      transparent: true,
-      roughness: 0.25,
-      metalness: 0.1,
-      side: THREE.DoubleSide
-    });
-
-    characterMesh = new THREE.Mesh(geo, mat);
-    characterMesh.position.set(0, -0.15, 0);
-    characterGroup.add(characterMesh);
-  }, undefined, () => {
-    // Fallback to portrait.png if cutout not loaded
-    textureLoader.load('media/portrait.png', (tex) => {
-      const geo = new THREE.PlaneGeometry(2.4, 3.6);
-      const mat = new THREE.MeshStandardMaterial({ map: tex, transparent: true, roughness: 0.3 });
-      characterMesh = new THREE.Mesh(geo, mat);
-      characterGroup.add(characterMesh);
-    });
-  });
 
   // --- Volumetric 3D Floating Particles ---
   const particleCount = 650;

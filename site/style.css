@@ -236,6 +236,8 @@ html, body {
   z-index: 1;
   pointer-events: none;
   background-color: #000;
+  transform: scale(1.08);
+  transform-origin: 40% 40%;
   will-change: transform;
 }
 
