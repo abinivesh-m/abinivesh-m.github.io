@@ -1,20 +1,21 @@
 import subprocess, time, sys
 
-print("Starting Pristine 1080p Film Compilation (Clip 5 Trimmed, Zero Distortion, Watermark-Free)...")
+print("Starting Master Pristine Film Compilation with AI Clip 6...")
 t0 = time.time()
 
 # High-fidelity filter chain:
-# - Clip 5 trimmed to 4.0s to cleanly eliminate the last 2 seconds of AI face drift
-# - Lanczos 7% scale & crop (2064:1161 -> 1920:1080) for 100% watermark elimination
-# - Subtle CAS (0.30) for natural, high-definition clarity without noise halos
-# - Seamless crossfades at exact mathematical offsets
+# - Clips 0-4: Scale to 2064:1161 & crop to 1920:1080 (eliminates Kling watermark)
+# - Clip 4 (clip5.mp4): Trimmed to 4.0s to eliminate the end distortion
+# - Clip 5 (clip6.mp4 from Hailuo 2.5K): Scale to 2200:1238 & crop to 1920:1080 (eliminates Hailuo watermark)
+# - Lanczos interpolation + subtle CAS 0.30 for crisp, pristine 1080p
+# - Strict 24 fps cinematic cadence and all-intra (-g 1) keyframing
 filter_str = (
     "[0:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v0];"
     "[1:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v1];"
     "[2:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v2];"
     "[3:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v3];"
     "[4:v]trim=duration=4.0,setpts=PTS-STARTPTS,scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v4];"
-    "[5:v]scale=2064:1161:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v5];"
+    "[5:v]scale=2200:1238:flags=lanczos,crop=1920:1080:(in_w-1920)/2:0,cas=strength=0.30,fps=24,format=yuv420p[v5];"
     "[v0][v1]xfade=transition=fade:duration=0.25:offset=5.38[x01];"
     "[x01][v2]xfade=transition=fade:duration=0.25:offset=10.76[x02];"
     "[x02][v3]xfade=transition=fade:duration=0.25:offset=18.55[x03];"
@@ -46,7 +47,7 @@ cmd_master = [
 print("Executing FFmpeg compile for site/media/film.mp4...")
 subprocess.run(cmd_master, cwd="C:/Users/abini/Desktop/portfolio", check=True)
 
-# Generate mobile version at 960x540 for fast loading on phones
+# Generate mobile version at 960x540
 cmd_mobile = [
     "ffmpeg", "-y",
     "-i", "site/media/film.mp4",
