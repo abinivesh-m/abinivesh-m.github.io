@@ -426,18 +426,26 @@
 
       if (projectTabs) {
         projectTabs.querySelectorAll('.project-tab').forEach((tab, i) => {
-          if (i === idx) tab.classList.add('active');
-          else tab.classList.remove('active');
+          if (i === idx) {
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+          } else {
+            tab.classList.remove('active');
+            tab.setAttribute('aria-selected', 'false');
+          }
         });
       }
 
       if (projectsDeck) {
         projectsDeck.innerHTML = `
           <article class="project-card spotlight-card">
-            <div class="project-img-wrap" title="Click to zoom in">
+            <div class="project-img-wrap" title="Click to zoom full architecture proof">
               <img src="${p.image}" alt="${p.title}" class="project-img" loading="lazy">
               <span class="project-award">${cleanAward}</span>
-              <div class="zoom-hint">Click image to zoom</div>
+              <div class="zoom-hint">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                <span>Click image to zoom proof</span>
+              </div>
             </div>
             <div class="project-body">
               <div class="project-top-row">
@@ -462,9 +470,15 @@
                   </a>
                 </div>
                 <div class="project-nav-buttons">
-                  <button type="button" class="project-nav-btn" id="prev-project-btn" aria-label="Previous Project">←</button>
-                  <span class="project-counter">${idx + 1} / ${cfg.projects.length}</span>
-                  <button type="button" class="project-nav-btn" id="next-project-btn" aria-label="Next Project">→</button>
+                  <button type="button" class="project-nav-btn" id="prev-project-btn" aria-label="Previous Project" title="Previous System">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                    <span>Prev</span>
+                  </button>
+                  <span class="project-counter">${idx + 1} of ${cfg.projects.length}</span>
+                  <button type="button" class="project-nav-btn" id="next-project-btn" aria-label="Next Project" title="Next System">
+                    <span>Next</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
                 </div>
               </div>
             </div>
@@ -507,12 +521,51 @@
       }
     }
 
+    // Top control bar prev/next buttons
+    const ctrlPrevBtn = document.getElementById('ctrl-prev-btn');
+    const ctrlNextBtn = document.getElementById('ctrl-next-btn');
+    if (ctrlPrevBtn) {
+      ctrlPrevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const prev = (activeProjectIdx - 1 + cfg.projects.length) % cfg.projects.length;
+        renderActiveProject(prev);
+      });
+    }
+    if (ctrlNextBtn) {
+      ctrlNextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const next = (activeProjectIdx + 1) % cfg.projects.length;
+        renderActiveProject(next);
+      });
+    }
+
+    // Keyboard Arrow navigation for projects
+    window.addEventListener('keydown', (e) => {
+      const lightbox = document.getElementById('image-lightbox');
+      if (lightbox && lightbox.classList.contains('active')) return;
+      if (e.key === 'ArrowLeft') {
+        const prev = (activeProjectIdx - 1 + cfg.projects.length) % cfg.projects.length;
+        renderActiveProject(prev);
+      } else if (e.key === 'ArrowRight') {
+        const next = (activeProjectIdx + 1) % cfg.projects.length;
+        renderActiveProject(next);
+      }
+    });
+
     if (projectTabs && cfg.projects) {
-      projectTabs.innerHTML = cfg.projects.map((p, i) => `
-        <button type="button" class="project-tab ${i === 0 ? 'active' : ''}" data-idx="${i}">
-          ${p.title.split(' ')[0]}
-        </button>
-      `).join('');
+      projectTabs.innerHTML = cfg.projects.map((p, i) => {
+        let label = p.title.split(' ')[0];
+        if (p.id === 'dejavu') label = 'DejaVu';
+        if (p.id === 'waterlog') label = 'Waterlog';
+        if (p.id === 'skillnexus') label = 'SkillNexus';
+        if (p.id === 'nexus-shield') label = 'NexusShield';
+        return `
+          <button type="button" class="project-tab ${i === 0 ? 'active' : ''}" data-idx="${i}" role="tab" aria-selected="${i === 0}">
+            <span class="tab-idx">0${i + 1}</span>
+            <span class="tab-name">${label}</span>
+          </button>
+        `;
+      }).join('');
 
       projectTabs.querySelectorAll('.project-tab').forEach(tab => {
         tab.addEventListener('click', (e) => {
