@@ -26,7 +26,7 @@ window.CONFIG = {
       tagline: "6-Agent Career Orchestration Platform",
       award: "1st Place Winner (₹20,000) — PromptWars 2026",
       desc: "Built a 6-agent collaborative workflow (Profile, Gap, Curriculum, Resource, Assessor, Mentor) with readiness scoring and DAG sequencing using FastAPI and Gemini API. Won 1st place at PromptWars 2026.",
-      tech: ["Python", "FastAPI", "Gemini API", "Docker", "Cloud Run"],
+      tech: ["Python", "FastAPI", "Google Gemini API", "Docker", "Cloud Run"],
       github: "https://github.com/abinivesh-m/Skillnexus-ai",
       live: "https://skillnexus-ai.vercel.app",
       image: "media/screenshot-skillnexus.png"
@@ -35,9 +35,9 @@ window.CONFIG = {
       id: "nexus-shield",
       title: "NexusShield",
       tagline: "AI Scam Detection Engine",
-      award: "38/38 Passing CI/CD Tests",
+      award: "38/38 Passing pytest CI/CD Tests",
       desc: "Scam detection engine scoring internship/job offers with red-flag explanations, employer domain verification, and HMAC-SHA256 verification receipts.",
-      tech: ["Python", "FastAPI", "PostgreSQL", "Google Gemini API", "HMAC-SHA256"],
+      tech: ["Python", "FastAPI", "PostgreSQL", "Google Gemini API", "pytest", "HMAC-SHA256"],
       github: "https://github.com/abinivesh-m/Nexus-Shield",
       live: "https://github.com/abinivesh-m/Nexus-Shield/releases/latest",
       image: "media/screenshot-nexusshield-zoomed.png"
@@ -90,7 +90,7 @@ window.CONFIG = {
     "Languages & Web": ["Python", "SQL", "HTML5", "CSS3"],
     "Backend & APIs": ["FastAPI", "REST APIs", "PostgreSQL", "SQLite", "Docker", "Git"],
     "AI & Computer Vision": ["Google Gemini API", "Prompt Engineering", "OpenCV", "YOLOv8", "MediaPipe"],
-    "DevOps & Tools": ["GitHub Actions (CI/CD)", "Streamlit", "Postman", "Linux CLI", "Vercel"]
+    "DevOps & Testing": ["pytest", "GitHub Actions (CI/CD)", "Streamlit", "Postman", "Linux CLI", "Vercel"]
   },
 
   resume: {
@@ -101,25 +101,25 @@ window.CONFIG = {
         role: "HackerRank Campus Crew Leader",
         company: "SKCET",
         period: "Nov 2026 – Present",
-        desc: "Direct campus developer community; organized 'Mission 404' 6-problem contest; lead peer problem-solving sessions."
+        desc: "Direct campus developer community (500+ peers); organized 'Mission 404' 6-problem contest; lead peer problem-solving sessions in Python."
       },
       {
         role: "Class Representative",
         company: "Dept. of ECE, SKCET",
         period: "Aug 2025 – Present",
-        desc: "Elected student representative; communicate academic schedules and technical events for a cohort of 60+ students."
+        desc: "Elected student representative for 60+ engineers; coordinate academic deliverables and department technical symposium schedules with senior faculty."
       },
       {
         role: "Technical Team Lead",
         company: "Hackathons & Competitions",
         period: "Aug 2025 – Present",
-        desc: "Led student teams across national hackathons (1st Place PromptWars RTC, National Finalist IIT Madras)."
+        desc: "Led student engineering teams across national hackathons (1st Place PromptWars RTC, National Finalist IIT Madras)."
       },
       {
         role: "Software Engineering Intern",
         company: "Thiranex (Remote)",
         period: "May 2026 – Jun 2026",
-        desc: "Contributed to full-stack feature development and automated testing workflows via GitHub Actions CI/CD."
+        desc: "Developed responsive full-stack features and automated linting/test workflows in GitHub Actions CI/CD pipelines under senior engineer code reviews."
       }
     ],
     education: [
@@ -127,7 +127,7 @@ window.CONFIG = {
         degree: "B.E. Electronics & Communication Engineering",
         institution: "Sri Krishna College of Engineering & Technology (SKCET), Coimbatore",
         period: "Aug 2025 – Aug 2029 (Expected)",
-        details: "CGPA: 9.1 / 10.0 (4th Semester)"
+        details: "CGPA: 9.1 / 10.0 (4th Semester Official)"
       }
     ]
   },
