@@ -27,7 +27,7 @@
   // CINEMATIC SCROLL-SCRUBBING FILM ENGINE (Page 14 Visual Guide: Blob URL)
   // ==========================================================================
   const film = document.getElementById('film');
-  const cacheKey = '?v=20261123_topnotch_v1';
+  const cacheKey = '?v=20261124_realcugan_peak';
   const videoSrc = ((window.innerWidth <= 760) ? 'media/film_mobile.mp4' : 'media/film.mp4') + cacheKey;
   let targetFilmTime = 0;
   let currentFilmTime = 0;

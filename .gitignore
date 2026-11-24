@@ -21,3 +21,9 @@ site/media/timing_check/
 # OS
 .DS_Store
 Thumbs.db
+
+site/media/film.realcugan*
+site/media/film.realesrgan*
+site/media/*test*.mp4
+site/media/*web*.mp4
+check_clips.py
