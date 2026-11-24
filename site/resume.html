@@ -4,299 +4,501 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abinivesh M — Software Development Engineer (SDE) · AI Product Engineer | Resume</title>
-  <meta name="description" content="1-Page ATS-optimized resume of Abinivesh M — Software Development Engineer (SDE) · AI Product Engineer. 3x Hackathon Winner & Team Lead, 2x IIT Finalist, HackerRank Campus Crew Leader, B.E. ECE at SKCET (9.1 CGPA).">
-  <meta name="keywords" content="Abinivesh M, Software Development Engineer, SDE, AI Product Engineer, Product Engineering, Python, FastAPI, Docker, LLM Swarm, AWS, Flutter, PostgreSQL, ONNX, YOLOv8, MediaPipe, SKCET, LeetCode">
+  <meta name="description" content="Official ATS-friendly resume of Abinivesh M — Software Development Engineer (SDE) & AI Product Engineer. 9.1 CGPA at SKCET, 3x Hackathon Winner, 2x IIT Finalist & Team Lead, HackerRank Campus Crew Leader.">
+  <meta name="keywords" content="Abinivesh M, Software Development Engineer, SDE, AI Product Engineer, Product Engineering, Python, FastAPI, Docker, Cloud Run, AWS Lambda, DynamoDB, PostgreSQL, SQL, Google Gemini API, LLM Swarms, YOLOv8, ONNX Runtime, MediaPipe, Flutter, GitHub Actions, CI/CD, SKCET, LeetCode">
   <meta name="author" content="Abinivesh M">
+  <meta name="robots" content="index, follow">
+
   <style>
+    /* ==========================================================================
+       ATS-FRIENDLY STANDALONE RESUME STYLES
+       - Zero external dependencies (renders offline on any ATS engine)
+       - Strict single-column hierarchy for linear ATS parsing
+       - Compact A4 print stylesheet engineered for exact 1-page fit
+       ========================================================================== */
     @page {
       size: A4 portrait;
       margin: 8mm 10mm 8mm 10mm;
     }
-    * {
+
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 8.2pt;
-      line-height: 1.25;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 8.1pt;
+      line-height: 1.26;
       color: #111827;
-      background: #f8fafc;
+      background: #f1f5f9;
       padding: 1.5rem 1rem;
+      -webkit-font-smoothing: antialiased;
     }
-    .no-print {
+
+    .no-print-bar {
       max-width: 800px;
-      margin: 0 auto 1rem;
+      margin: 0 auto 0.85rem auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .back-link {
-      font-size: 0.85rem;
+
+    .back-btn {
+      font-size: 0.82rem;
       font-weight: 600;
-      color: #1e3a8a;
+      color: #0f172a;
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.85rem;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: all 0.2s ease;
     }
-    .btn-print {
-      background: #1e3a8a;
-      color: #fff;
+
+    .back-btn:hover {
+      background: #e2e8f0;
+      color: #000;
+    }
+
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: #0f172a;
+      color: #ffffff;
       padding: 0.45rem 1rem;
       border-radius: 6px;
       font-size: 0.82rem;
       font-weight: 600;
       border: none;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+      transition: all 0.2s ease;
     }
-    .resume-container {
+
+    .print-btn:hover {
+      background: #1e293b;
+      transform: translateY(-1px);
+    }
+
+    /* Main Resume Sheet */
+    .resume-sheet {
       max-width: 800px;
       margin: 0 auto;
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 6px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-      padding: 1.75rem 2rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+      padding: 1.6rem 2rem 1.4rem 2rem;
     }
-    .header {
+
+    /* Header Section */
+    header.resume-header {
       text-align: center;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
-    h1.name {
+
+    h1.applicant-name {
       font-size: 16pt;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      line-height: 1.1;
+      letter-spacing: 0.6px;
       color: #0f172a;
+      line-height: 1.1;
     }
-    .tagline {
-      font-size: 8.2pt;
-      font-weight: 600;
-      color: #1e3a8a;
+
+    .target-role {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #ea580c;
       margin-top: 2px;
-      letter-spacing: 0.1px;
+      letter-spacing: 0.3px;
     }
-    .contact-line {
-      font-size: 7.8pt;
+
+    .credential-tagline {
+      font-size: 8pt;
+      font-weight: 600;
       color: #334155;
+      margin-top: 1.5px;
+    }
+
+    .contact-info {
+      font-size: 7.7pt;
+      color: #475569;
       margin-top: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px;
     }
-    .contact-line a {
-      color: #1e3a8a;
+
+    .contact-info a {
+      color: #0f172a;
       text-decoration: none;
+      font-weight: 500;
     }
-    .contact-line a:hover {
+
+    .contact-info a:hover {
       text-decoration: underline;
     }
+
     .sep {
       color: #94a3b8;
-      margin: 0 3px;
+      user-select: none;
     }
-    h2.section-title {
+
+    /* Standard ATS Section Headings */
+    h2.section-heading {
       font-size: 8.8pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: #1e3a8a;
-      border-bottom: 1.2px solid #1e3a8a;
-      margin-top: 5px;
+      letter-spacing: 0.65px;
+      color: #0f172a;
+      border-bottom: 1.2px solid #0f172a;
+      margin-top: 5.5px;
       margin-bottom: 3px;
       padding-bottom: 1px;
     }
-    .row {
+
+    .entry {
+      margin-bottom: 3.5px;
+    }
+
+    .row-flex {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
     }
-    .bold { font-weight: 700; color: #0f172a; }
-    .italic { font-style: italic; color: #334155; }
-    .date { font-size: 7.8pt; font-weight: 600; color: #475569; }
-    .sub { font-size: 7.6pt; font-weight: 600; color: #1e3a8a; margin-top: 0.5px; }
-    .tech { font-family: 'SFMono-Regular', Consolas, monospace; font-size: 7.3pt; color: #475569; }
-    ul.bullets {
-      margin-left: 12px;
-      margin-top: 1px;
+
+    .bold-title {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .italic-subtitle {
+      font-style: italic;
+      color: #334155;
+    }
+
+    .meta-date {
+      font-size: 7.6pt;
+      font-weight: 600;
+      color: #475569;
+      white-space: nowrap;
+    }
+
+    .sub-meta {
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: #ea580c;
+      margin-top: 0.5px;
+    }
+
+    .sub-meta a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .sub-meta a:hover {
+      text-decoration: underline;
+    }
+
+    .tech-pill-list {
+      font-family: 'SFMono-Regular', Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 7.2pt;
+      color: #475569;
+    }
+
+    ul.bullet-list {
+      margin-left: 13px;
+      margin-top: 1.5px;
       margin-bottom: 2px;
     }
-    ul.bullets li {
-      font-size: 7.9pt;
+
+    ul.bullet-list li {
+      font-size: 7.8pt;
       line-height: 1.25;
       margin-bottom: 1.5px;
-      color: #1f2937;
+      color: #1e293b;
     }
-    .skills-table { width: 100%; font-size: 7.9pt; }
-    .skills-row { display: flex; margin-bottom: 1.5px; line-height: 1.25; }
-    .skills-label { font-weight: 700; width: 122px; flex-shrink: 0; color: #0f172a; }
-    .skills-val { flex: 1; color: #334155; }
-    .entry { margin-bottom: 3px; }
-    .footer-line {
+
+    /* Skills Key-Value Grid */
+    .skills-block {
+      width: 100%;
+      font-size: 7.8pt;
+      margin-top: 1px;
+    }
+
+    .skill-line {
+      display: flex;
+      margin-bottom: 1.5px;
+      line-height: 1.25;
+    }
+
+    .skill-type {
+      font-weight: 700;
+      width: 132px;
+      flex-shrink: 0;
+      color: #0f172a;
+    }
+
+    .skill-items {
+      flex: 1;
+      color: #334155;
+    }
+
+    /* Footer Metadata */
+    footer.resume-footer {
       margin-top: 4px;
-      font-size: 7.2pt;
+      font-size: 7pt;
       color: #64748b;
       display: flex;
       justify-content: space-between;
-      border-top: 0.5px solid #e2e8f0;
+      align-items: center;
+      border-top: 0.5px solid #cbd5e1;
       padding-top: 2px;
     }
 
+    /* Print Optimization for Single-Page A4 Output */
     @media print {
       body {
-        background: #fff !important;
+        background: #ffffff !important;
         padding: 0 !important;
       }
-      .no-print {
+      .no-print-bar {
         display: none !important;
       }
-      .resume-container {
+      .resume-sheet {
         border: none !important;
         box-shadow: none !important;
         padding: 0 !important;
         max-width: 100% !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="no-print">
-    <a href="index.html" class="back-link">&larr; Back to Interactive Portfolio</a>
-    <button onclick="window.print()" class="btn-print">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-      Print / Save PDF (1-Page)
+  <!-- Screen Navigation Bar (Hidden during Print/ATS PDF conversion) -->
+  <aside class="no-print-bar" aria-label="Resume Actions">
+    <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+    <button type="button" onclick="window.print()" class="print-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      <span>Print / Save PDF (1-Page ATS)</span>
     </button>
-  </div>
+  </aside>
 
-  <main class="resume-container">
-    <div class="header">
-      <h1 class="name">Abinivesh M</h1>
-      <div class="tagline">Software Development Engineer (SDE) · AI Product Engineer | 3× Hackathon Winner & Team Lead · 2× IIT Finalist · HackerRank Campus Crew Leader</div>
-      <div class="contact-line">
-        Namakkal & Coimbatore, TN<span class="sep">·</span>+91 77084 63449<span class="sep">·</span><a href="mailto:abinivesh.1203@gmail.com">abinivesh.1203@gmail.com</a><span class="sep">·</span><a href="https://github.com/abinivesh-m" target="_blank">github.com/abinivesh-m</a><span class="sep">·</span><a href="https://linkedin.com/in/abinivesh-m-883052380" target="_blank">linkedin.com/in/abinivesh-m</a><span class="sep">·</span><a href="https://abinivesh-m.github.io" target="_blank">abinivesh-m.github.io</a>
+  <!-- Semantic ATS-Scannable Document Container -->
+  <main class="resume-sheet">
+
+    <!-- Header: Identity & Contact -->
+    <header class="resume-header">
+      <h1 class="applicant-name">Abinivesh M</h1>
+      <div class="target-role">SOFTWARE DEVELOPMENT ENGINEER (SDE) · AI PRODUCT ENGINEER</div>
+      <div class="credential-tagline">3× Hackathon Winner & Team Lead · 2× IIT Finalist · HackerRank Campus Crew Leader · 9.1 CGPA @ SKCET</div>
+      <div class="contact-info">
+        <span>Namakkal & Coimbatore, TN, India</span>
+        <span class="sep">·</span>
+        <span>+91 77084 63449</span>
+        <span class="sep">·</span>
+        <a href="mailto:abinivesh.1203@gmail.com">abinivesh.1203@gmail.com</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/abinivesh-m" target="_blank" rel="noreferrer">github.com/abinivesh-m</a>
+        <span class="sep">·</span>
+        <a href="https://linkedin.com/in/abinivesh-m-883052380" target="_blank" rel="noreferrer">linkedin.com/in/abinivesh-m</a>
+        <span class="sep">·</span>
+        <a href="https://abinivesh-m.github.io" target="_blank" rel="noreferrer">abinivesh-m.github.io</a>
       </div>
-    </div>
+    </header>
 
-    <h2 class="section-title">Education</h2>
-    <div class="row">
-      <div><span class="bold">Sri Krishna College of Engineering and Technology (SKCET)</span>, Coimbatore</div>
-      <div class="date">Aug 2025 – Aug 2029 (Expected)</div>
-    </div>
-    <div class="row">
-      <div class="italic">Bachelor of Engineering (B.E.) — Electronics & Communication Engineering</div>
-      <div class="bold">CGPA: 9.1 / 10.0 (Class Representative · Top 1%)</div>
-    </div>
-    <div style="font-size: 7.6pt; color: #475569; margin-top: 0.5px;">
-      <span class="bold">Coursework:</span> Data Structures & Algorithms, Object-Oriented Programming (OOP), DBMS, Computer Networks, Operating Systems, Software Engineering.
-    </div>
-
-    <h2 class="section-title">Technical Skills & Product Leadership</h2>
-    <div class="skills-table">
-      <div class="skills-row"><span class="skills-label">Languages:</span><span class="skills-val">Python, SQL, HTML5, CSS3, Dart, JavaScript</span></div>
-      <div class="skills-row"><span class="skills-label">Systems & Backend:</span><span class="skills-val">FastAPI, REST APIs, PostgreSQL, SQLite, DynamoDB, Docker, Google Cloud Run, AWS (Lambda, S3, API Gateway)</span></div>
-      <div class="skills-row"><span class="skills-label">AI & Intelligent Systems:</span><span class="skills-val">Google Gemini API, LLM Swarms, Agentic Workflows, Prompt Engineering, RAG, ONNX Runtime, YOLOv8, MediaPipe, Bedrock, Groq</span></div>
-      <div class="skills-row"><span class="skills-label">Product & Leadership:</span><span class="skills-val">Technical Team Leadership, 0 → 1 Product Engineering, System Architecture & RFCs, User Research & Roadmapping, GitHub Actions (CI/CD), Agile Sprints</span></div>
-    </div>
-
-    <h2 class="section-title">Featured Engineering Projects</h2>
-    <div class="entry">
-      <div class="row">
-        <div><span class="bold">SkillNexus AI — 6-Agent Career Orchestration Platform</span></div>
-        <div class="tech">Python · FastAPI · LLM Swarms · Docker · Cloud Run</div>
+    <!-- Education Section -->
+    <section aria-labelledby="section-education">
+      <h2 id="section-education" class="section-heading">Education</h2>
+      <div class="entry">
+        <div class="row-flex">
+          <div><span class="bold-title">Sri Krishna College of Engineering and Technology (SKCET)</span>, Coimbatore, Tamil Nadu</div>
+          <div class="meta-date">Aug 2025 – Aug 2029 (Expected)</div>
+        </div>
+        <div class="row-flex">
+          <div class="italic-subtitle">Bachelor of Engineering (B.E.) — Electronics & Communication Engineering</div>
+          <div class="bold-title">CGPA: 9.1 / 10.0 (Class Representative · Top 1% of Batch)</div>
+        </div>
+        <div style="font-size: 7.5pt; color: #475569; margin-top: 0.5px;">
+          <span class="bold-title">Relevant Coursework:</span> Data Structures & Algorithms, Object-Oriented Programming (OOP), Database Management Systems (DBMS), Operating Systems, Computer Networks, Software Engineering.
+        </div>
       </div>
-      <div class="sub">1st Place Winner (₹20,000) — PromptWars × RTC GDC Hackathon 2026 | <a href="https://github.com/abinivesh-m/Skillnexus-ai" target="_blank">github.com/abinivesh-m/Skillnexus-ai</a></div>
-      <ul class="bullets">
-        <li>Architected 6-agent collaborative LLM swarm with deterministic weighted readiness scoring & DAG prerequisite sequencing, eliminating hallucinated metrics.</li>
-        <li>Engineered counterfactual 'what-if' simulation engine recalculating career readiness in real time; containerized sub-1 MB production backend deployed on Cloud Run.</li>
+    </section>
+
+    <!-- Technical Skills & Competencies Section -->
+    <section aria-labelledby="section-skills">
+      <h2 id="section-skills" class="section-heading">Technical Skills & Leadership</h2>
+      <div class="skills-block">
+        <div class="skill-line">
+          <span class="skill-type">Programming & Web:</span>
+          <span class="skill-items">Python, SQL, HTML5, CSS3, JavaScript, Dart</span>
+        </div>
+        <div class="skill-line">
+          <span class="skill-type">Backend & Systems:</span>
+          <span class="skill-items">FastAPI, RESTful APIs, PostgreSQL, SQLite, DynamoDB, Docker, Google Cloud Run, Microservices Architecture</span>
+        </div>
+        <div class="skill-line">
+          <span class="skill-type">AI & Applied Vision:</span>
+          <span class="skill-items">Google Gemini API, LLM Swarms, Agentic Workflows, Prompt Engineering, RAG, ONNX Runtime, YOLOv8, MediaPipe, Amazon Bedrock, Groq</span>
+        </div>
+        <div class="skill-line">
+          <span class="skill-type">DevOps & Cloud:</span>
+          <span class="skill-items">AWS (Lambda, S3, API Gateway), GitHub Actions (CI/CD), Git, Linux CLI, Postman, Vercel, HMAC-SHA256 Cryptography</span>
+        </div>
+        <div class="skill-line">
+          <span class="skill-type">Product & Leadership:</span>
+          <span class="skill-items">Technical Team Leadership, 0 → 1 Product Engineering, System Architecture & RFCs, User Research & Roadmapping, Agile Sprints</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Engineering Projects Section -->
+    <section aria-labelledby="section-projects">
+      <h2 id="section-projects" class="section-heading">Featured Engineering Projects</h2>
+
+      <!-- Project 1 -->
+      <article class="entry">
+        <div class="row-flex">
+          <div><span class="bold-title">SkillNexus AI — 6-Agent Career Orchestration Platform</span></div>
+          <div class="tech-pill-list">Python · FastAPI · LLM Swarms · Docker · Cloud Run</div>
+        </div>
+        <div class="sub-meta">1st Place Winner (₹20,000) — PromptWars × RTC GDC Hackathon 2026 | <a href="https://github.com/abinivesh-m/Skillnexus-ai" target="_blank" rel="noreferrer">github.com/abinivesh-m/Skillnexus-ai</a></div>
+        <ul class="bullet-list">
+          <li>Architected a 6-agent collaborative LLM swarm (Profile, Gap, Curriculum, Resource, Assessor, Mentor) with deterministic weighted readiness scoring & DAG prerequisite sequencing, eliminating hallucinated metrics.</li>
+          <li>Engineered a counterfactual "what-if" simulation engine recalculating career readiness in real time upon skill mastery; containerized sub-1 MB production backend deployed on Cloud Run with zero-latency cold starts.</li>
+        </ul>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="entry">
+        <div class="row-flex">
+          <div><span class="bold-title">NexusShield — AI Scam Detection Engine</span></div>
+          <div class="tech-pill-list">Flutter · FastAPI · PostgreSQL · Google Gemini API · HMAC-SHA256</div>
+        </div>
+        <div class="sub-meta">38/38 Passing Automated CI/CD Tests | Google DeepMind × Cloud Buildathon | <a href="https://github.com/abinivesh-m/Nexus-Shield" target="_blank" rel="noreferrer">github.com/abinivesh-m/Nexus-Shield</a></div>
+        <ul class="bullet-list">
+          <li>Engineered an AI scam detection pipeline scoring job offers 0–100 with Gemini API red-flag explanations & automated employer domain verification.</li>
+          <li>Implemented tamper-evident HMAC-SHA256 cryptographic public receipts for zero-auth validation; enforced privacy architecture hashing and redacting PII in offer text at rest with consent-gated account deletion.</li>
+        </ul>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="entry">
+        <div class="row-flex">
+          <div><span class="bold-title">TrackX — City-Wide ANPR Vehicle Intelligence</span></div>
+          <div class="tech-pill-list">Python · OpenCV · ONNX Runtime · FastAPI · React</div>
+        </div>
+        <div class="sub-meta">Smart India Hackathon 2026 BEL Problem (Top 50 of 750 Teams, Team Leader) | <a href="https://github.com/abinivesh-m/TrackX" target="_blank" rel="noreferrer">github.com/abinivesh-m/TrackX</a></div>
+        <ul class="bullet-list">
+          <li>Developed an ANPR vehicle tracking pipeline fusing plate text OCR, vehicle appearance, GPS coordinates, and timestamps from municipal CCTV infrastructure (TRL 4–5).</li>
+          <li>Trained and exported ONNX neural model served via FastAPI with a live React trajectory tracking dashboard; led team to Top 50 of 750 teams in SIH internal round.</li>
+        </ul>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="entry">
+        <div class="row-flex">
+          <div><span class="bold-title">RoadSOS — Driver Safety & Emergency Response</span></div>
+          <div class="tech-pill-list">Python · YOLOv8 · MediaPipe · Streamlit · GPS</div>
+        </div>
+        <div class="sub-meta">National Finalist — BIMSTEC AI National Road Safety Hackathon (IIT Madras, 15,000+ Registrations) | <a href="https://github.com/abinivesh-m/RoadSOS-AI" target="_blank" rel="noreferrer">github.com/abinivesh-m/RoadSOS-AI</a></div>
+        <ul class="bullet-list">
+          <li>Built a real-time driver monitoring system detecting phone usage (YOLOv8) and drowsiness (MediaPipe Eye Aspect Ratio) with an automated GPS SOS countdown alert dispatch pipeline.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Work Experience & Leadership Section -->
+    <section aria-labelledby="section-experience">
+      <h2 id="section-experience" class="section-heading">Work Experience & Leadership</h2>
+
+      <!-- Leadership 1 -->
+      <article class="entry">
+        <div class="row-flex">
+          <div><span class="bold-title">Technical Team Lead & AI Product Architect</span> — Hackathons & IIT Symposiums</div>
+          <div class="meta-date">Aug 2025 – Present</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Led multi-disciplinary engineering teams across 5+ national hackathons (IIT Madras Shaastra, IIT Kharagpur Megalith, PromptWars RTC); owned 0 → 1 product lifecycle from user research to live production cloud deployments.</li>
+        </ul>
+      </article>
+
+      <!-- Leadership 2 -->
+      <article class="entry">
+        <div class="row-flex">
+          <div><span class="bold-title">HackerRank Campus Crew Leader</span> — SKCET</div>
+          <div class="meta-date">Nov 2026 – Present | Coimbatore, India</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Direct campus developer community (500+ peers); designed and executed <strong>"Mission 404"</strong> 6-problem coding contest with cross-department participation; mentor students in algorithmic problem solving.</li>
+        </ul>
+      </article>
+
+      <!-- Experience 1 -->
+      <article class="entry">
+        <div class="row-flex">
+          <div><span class="bold-title">Thiranex</span> — Software Engineering Intern (Full Stack)</div>
+          <div class="meta-date">May 2026 – Jun 2026 | Remote</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Shipped full-stack features with strict code review workflows, automated CI/CD pipeline integration, and 38/38 automated test suites under senior engineering mentorship.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Competitive Programming & Honors Section -->
+    <section aria-labelledby="section-honors">
+      <h2 id="section-honors" class="section-heading">Competitive Programming, Honors & Certifications</h2>
+      <ul class="bullet-list">
+        <li><span class="bold-title">LeetCode:</span> 113 problems solved (39 Easy, 59 Medium, 15 Hard) · Contest Rating: <span class="bold-title">1480</span> · 81.3% Acceptance Rate · Top 69–77% (<a href="https://leetcode.com/u/Abinivesh__M/" target="_blank" rel="noreferrer">leetcode.com/u/Abinivesh__M/</a>).</li>
+        <li><span class="bold-title">Awards & Honors:</span> 1st Place PromptWars (₹20,000) · National Finalist IIT Madras (15,000+ regs) · 4th Place ChurnZero (IIT Kharagpur) · Top 50 of 750 Teams SIH 2026 · Rank 8 Season 2 National Cloud & AI Challenge (3.4K+ participants).</li>
+        <li><span class="bold-title">Certifications:</span> HackerRank Software Engineer Intern (ID: 6B083196A958) · AI For Everyone (DeepLearning.AI) · Google Data Analytics Capstone (Coursera) · eSim (IIT Bombay / SINE, Score: 85.71%).</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="entry">
-      <div class="row">
-        <div><span class="bold">NexusShield — AI Scam Detection Engine</span></div>
-        <div class="tech">Flutter · FastAPI · PostgreSQL · Google Gemini API · HMAC-SHA256</div>
-      </div>
-      <div class="sub">38/38 Passing Automated CI/CD Tests | Google DeepMind × Google Cloud Buildathon | <a href="https://github.com/abinivesh-m/Nexus-Shield" target="_blank">github.com/abinivesh-m/Nexus-Shield</a></div>
-      <ul class="bullets">
-        <li>Engineered scam detection pipeline scoring job offers 0–100 with Gemini API red-flag explanations & automated employer domain verification.</li>
-        <li>Implemented tamper-evident HMAC-SHA256 cryptographic public receipts for zero-auth validation; zero-PII privacy design with consent-gated access.</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="row">
-        <div><span class="bold">TrackX — City-Wide ANPR Vehicle Intelligence</span></div>
-        <div class="tech">Python · OpenCV · ONNX Runtime · FastAPI · React</div>
-      </div>
-      <div class="sub">Smart India Hackathon 2026 BEL Problem (Top 50 of 750 Teams, Team Leader) | <a href="https://github.com/abinivesh-m/TrackX" target="_blank">github.com/abinivesh-m/TrackX</a></div>
-      <ul class="bullets">
-        <li>Built vehicle tracking pipeline fusing plate OCR, vehicle visual appearance, GPS, and timestamps from municipal CCTV infrastructure.</li>
-        <li>Trained & exported ONNX neural model served via FastAPI with a live React trajectory tracking and camera match dashboard.</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="row">
-        <div><span class="bold">RoadSOS — Driver Safety & Emergency Response</span></div>
-        <div class="tech">Python · YOLOv8 · MediaPipe · Streamlit · GPS</div>
-      </div>
-      <div class="sub">National Finalist — BIMSTEC AI Road Safety Hackathon (IIT Madras, 15,000+ Registrations) | <a href="https://github.com/abinivesh-m/RoadSOS-AI" target="_blank">github.com/abinivesh-m/RoadSOS-AI</a></div>
-      <ul class="bullets">
-        <li>Real-time driver monitoring detecting phone usage (YOLOv8) and drowsiness (MediaPipe EAR) with automated GPS SOS countdown dispatch pipeline.</li>
-      </ul>
-    </div>
-
-    <h2 class="section-title">Work Experience & Leadership</h2>
-    <div class="entry">
-      <div class="row">
-        <div><span class="bold">Technical Team Lead & AI Product Architect</span> — Hackathons & IIT Symposiums</div>
-        <div class="date">Aug 2025 – Present</div>
-      </div>
-      <ul class="bullets">
-        <li>Led cross-functional engineering teams across 5+ national hackathons (IIT Madras Shaastra, IIT Kharagpur Megalith, PromptWars RTC); owned 0 → 1 product lifecycle from user research to production cloud deployments.</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="row">
-        <div><span class="bold">HackerRank Campus Crew Leader</span> — SKCET</div>
-        <div class="date">Nov 2026 – Present | Coimbatore</div>
-      </div>
-      <ul class="bullets">
-        <li>Direct campus developer community (500+ peers); authored and directed <strong>'Mission 404'</strong> 6-problem contest; lead algorithmic problem-solving and system workshops.</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="row">
-        <div><span class="bold">Thiranex</span> — Software Engineering Intern (Full Stack)</div>
-        <div class="date">May 2026 – Jun 2026 | Remote</div>
-      </div>
-      <ul class="bullets">
-        <li>Shipped production features with strict code review workflows, automated CI/CD pipeline integration, and 38/38 automated test suites under senior engineering mentorship.</li>
-      </ul>
-    </div>
-
-    <h2 class="section-title">Competitive Programming, Honors & Certifications</h2>
-    <ul class="bullets">
-      <li><span class="bold">LeetCode:</span> 113 solved (39 Easy, 59 Medium, 15 Hard) · Rating: <span class="bold">1480</span> · 81.3% Acceptance · Top 69–77% (<a href="https://leetcode.com/u/Abinivesh__M/" target="_blank">leetcode.com/u/Abinivesh__M/</a>).</li>
-      <li><span class="bold">Honors:</span> 1st Place PromptWars (₹20,000) · National Finalist IIT Madras (15K+ regs) · 4th Place ChurnZero (IIT Kharagpur) · Top 50 SIH 2026 · Rank 8 3SVK (3.4K+).</li>
-      <li><span class="bold">Certifications:</span> HackerRank Software Engineer Intern (ID: 6B083196A958) · AI For Everyone (DeepLearning.AI) · eSim (IIT Bombay, 85.7%).</li>
-    </ul>
-
-    <div class="footer-line">
+    <!-- Footer: Auto-Updating Last-Updated Date & Languages -->
+    <footer class="resume-footer">
       <span>Languages: English (Professional), Tamil (Native)</span>
-      <span>Last Updated: <time id="last-updated" datetime="2026-11-22">22 November 2026</time></span>
-    </div>
+      <span>
+        Last Updated: 
+        <time id="last-updated" datetime="2026-11-24">24 November 2026</time>
+      </span>
+    </footer>
+
   </main>
 
+  <!-- Automatic Dynamic Last-Updated Date Script -->
   <script>
-    try {
-      const today = new Date();
-      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      document.getElementById("last-updated").textContent = today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
-    } catch(e){}
+    (function updateResumeTimestamp() {
+      try {
+        const timeElement = document.getElementById("last-updated");
+        if (!timeElement) return;
+        const now = new Date();
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const day = String(now.getDate()).padStart(2, '0');
+        const monthName = months[now.getMonth()];
+        const year = now.getFullYear();
+        timeElement.textContent = day + " " + monthName + " " + year;
+        timeElement.setAttribute("datetime", now.toISOString().split("T")[0]);
+      } catch (err) {
+        console.warn("Could not set dynamic date:", err);
+      }
+    })();
   </script>
+
 </body>
 </html>
