@@ -87,10 +87,10 @@ window.CONFIG = {
   ],
 
   skills: {
-    "Languages & Web": ["Python", "SQL", "HTML5", "CSS3"],
-    "Backend & APIs": ["FastAPI", "REST APIs", "PostgreSQL", "SQLite", "Docker", "Git"],
-    "AI & Computer Vision": ["Google Gemini API", "Prompt Engineering", "OpenCV", "YOLOv8", "MediaPipe"],
-    "DevOps & Testing": ["pytest", "GitHub Actions (CI/CD)", "Streamlit", "Postman", "Linux CLI", "Vercel"]
+    "Languages & Web": ["Python", "SQL", "HTML5", "CSS3", "Streamlit"],
+    "Backend & Databases": ["FastAPI (Async APIs)", "REST APIs", "PostgreSQL", "SQLite", "DynamoDB"],
+    "AI, LLMs & Vision": ["Google Gemini API", "Amazon Bedrock", "Groq", "Prompt Engineering", "OpenCV", "YOLOv8", "MediaPipe"],
+    "Cloud, DevOps & Tools": ["AWS (Lambda, API Gateway, S3)", "Docker", "Git", "GitHub Actions (CI/CD)", "pytest (TDD)", "Linux CLI", "Postman", "Vercel"]
   },
 
   resume: {
@@ -104,16 +104,16 @@ window.CONFIG = {
         desc: "Direct campus developer community (500+ peers); organized 'Mission 404' 6-problem contest; lead peer problem-solving sessions in Python."
       },
       {
+        role: "Hackathon Team Lead",
+        company: "National Competitions",
+        period: "Aug 2025 – Present",
+        desc: "Led cross-functional student teams in national hackathons; won 1st Place at PromptWars 2026 (₹20,000) and National Finalist at IIT Madras BIMSTEC AI Hackathon (15,000+ registrations)."
+      },
+      {
         role: "Class Representative",
         company: "Dept. of ECE, SKCET",
         period: "Aug 2025 – Present",
         desc: "Elected student representative for 60+ engineers; coordinate academic deliverables and department technical symposium schedules with senior faculty."
-      },
-      {
-        role: "Technical Team Lead",
-        company: "Hackathons & Competitions",
-        period: "Aug 2025 – Present",
-        desc: "Led student engineering teams across national hackathons (1st Place PromptWars RTC, National Finalist IIT Madras)."
       },
       {
         role: "Software Engineering Intern",
