@@ -89,8 +89,8 @@ window.CONFIG = {
   skills: {
     "AI & Agents": ["Google Gemini API", "LLM Swarms", "Prompt Engineering", "RAG", "Amazon Bedrock", "Groq", "NVIDIA Nemotron 3", "YOLOv8", "ONNX", "MediaPipe"],
     "Backend & Systems": ["FastAPI", "Python", "REST APIs", "SQLAlchemy", "Pydantic", "PostgreSQL", "SQLite", "DynamoDB", "HMAC-SHA256", "JWT Auth", "Docker"],
-    "Frontend & Mobile": ["Next.js", "React", "Flutter (Dart)", "Tailwind CSS", "Three.js / 3D Canvas", "TypeScript", "HTML5 / Canvas"],
-    "DevOps & Tools": ["AWS (Lambda, S3, API Gateway)", "GitHub Actions (CI/CD)", "Vercel", "Git", "Linux CLI", "Postman", "C++", "SQL"]
+    "Web & UI Prototyping": ["HTML5", "CSS3", "Tailwind CSS", "Streamlit (Python)", "Responsive Web", "REST API Integration"],
+    "DevOps & Tools": ["AWS (Lambda, S3, API Gateway)", "GitHub Actions (CI/CD)", "Vercel", "Git", "Linux CLI", "Postman", "SQL"]
   },
 
   resume: {
