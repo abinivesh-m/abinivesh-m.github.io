@@ -27,7 +27,7 @@
   // CINEMATIC SCROLL-SCRUBBING FILM ENGINE (Page 14 Visual Guide: Blob URL)
   // ==========================================================================
   const film = document.getElementById('film');
-  const cacheKey = '?v=20261124_realcugan_peak';
+  const cacheKey = '?v=20261124_rock_solid_ui';
   const videoSrc = ((window.innerWidth <= 760) ? 'media/film_mobile.mp4' : 'media/film.mp4') + cacheKey;
   let targetFilmTime = 0;
   let currentFilmTime = 0;
@@ -370,28 +370,10 @@
   animate();
 
   // ==========================================================================
-  // 3D CARD TILT ON MOUSE HOVER (PHYSICS-BASED)
+  // CARDS ARE FIRMLY STABILIZED (NO JITTER / ZERO TILT FOR EFFORTLESS CLICKING)
   // ==========================================================================
   function init3DCardTilt() {
-    const cards = document.querySelectorAll('.project-card, .glass, .stat-item, .resume-sheet');
-    cards.forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = ((y - centerY) / centerY) * -7;
-        const rotateY = ((x - centerX) / centerX) * 7;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-      });
-
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-      });
-    });
+    // Disabled physics tilt to ensure cards and buttons remain 100% rock-solid and easy to click
   }
 
   // ==========================================================================
