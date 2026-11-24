@@ -89,7 +89,7 @@ window.CONFIG = {
   skills: {
     "Languages & Web": ["Python", "SQL", "HTML5", "CSS3", "Streamlit"],
     "Backend & Databases": ["FastAPI (Async APIs)", "REST APIs", "PostgreSQL", "SQLite", "DynamoDB"],
-    "AI, LLMs & Vision": ["Google Gemini API", "Amazon Bedrock", "Groq", "Prompt Engineering", "OpenCV", "YOLOv8", "MediaPipe"],
+    "AI, LLMs & Vision": ["Google Gemini API", "Amazon Bedrock", "Groq", "Tavily", "Prompt Engineering", "OpenCV", "YOLOv8", "MediaPipe"],
     "Cloud, DevOps & Tools": ["AWS (Lambda, API Gateway, S3)", "Docker", "Git", "GitHub Actions (CI/CD)", "pytest (TDD)", "Linux CLI", "Postman", "Vercel"]
   },
 
