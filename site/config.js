@@ -1,21 +1,21 @@
 window.CONFIG = {
   name: "Abinivesh M",
-  role: "Software Development Engineer (SDE) · AI Systems",
+  role: "Software Development Engineer (SDE) · AI Product Engineer",
   location: "Namakkal & Coimbatore, Tamil Nadu, India",
-  status: "Open to SDE & AI Roles",
+  status: "Open to SDE & AI Product Roles",
   accentColor: "#ff9a4d",
   headingFont: "Anton, sans-serif",
   bodyFont: "Inter, sans-serif",
   
   about: {
     eyebrow: "01 — ABOUT ME",
-    title: "I build AI systems that solve real problems and ship to production.",
-    paragraph: "2nd-year ECE student at SKCET with a 9.1 CGPA. I architect end-to-end distributed systems, multi-agent LLM swarms, and high-throughput vision pipelines. 3× Hackathon Winner, 2× IIT Finalist & Team Leader, and HackerRank Campus Crew Leader.",
+    title: "Think like a founder. Build like an engineer. Lead like a product manager.",
+    paragraph: "2nd-year ECE student at SKCET with a 9.1 CGPA. I operate at the intersection of systems engineering, applied AI swarms, and product leadership — turning 0-to-1 problems into production software. 3× Hackathon Winner, 2× IIT Finalist & Team Lead, HackerRank Campus Crew Leader, and Class Representative.",
     stats: [
-      { value: "1st Place", label: "PromptWars RTC", sub: "₹20,000 Winner" },
-      { value: "9.1", label: "CGPA @ SKCET", sub: "B.E. ECE (Top Tier)" },
-      { value: "113", label: "LeetCode Solved", sub: "1480 Rating · 81.3% Acc" },
-      { value: "3× / 2×", label: "Hackathons / IIT", sub: "IIT Madras & Kharagpur" }
+      { value: "1st Place", label: "PromptWars RTC", sub: "₹20,000 Winner & Team Lead" },
+      { value: "9.1", label: "CGPA @ SKCET", sub: "Top 1% · Class Representative" },
+      { value: "3× / 2×", label: "Hackathons / IIT", sub: "Team Leader · IIT Madras & KGP" },
+      { value: "113+", label: "LeetCode Solved", sub: "1480 Rating · 81.3% Accuracy" }
     ]
   },
 
@@ -25,7 +25,7 @@ window.CONFIG = {
       title: "SkillNexus AI",
       tagline: "6-Agent Career Orchestration Platform",
       award: "1st Place Winner (₹20,000) — PromptWars 2026",
-      desc: "Architected a 6-agent LLM swarm (Profile, Gap, Curriculum, Resource, Assessor, Mentor) with deterministic weighted readiness scoring and DAG prerequisite sequencing. Includes counterfactual what-if simulation.",
+      desc: "Architected a 6-agent LLM swarm (Profile, Gap, Curriculum, Resource, Assessor, Mentor) with deterministic weighted readiness scoring and DAG prerequisite sequencing. Led the sprint to 1st place victory.",
       tech: ["Python", "FastAPI", "LLM Swarm", "Docker", "Cloud Run"],
       github: "https://github.com/abinivesh-m/Skillnexus-ai",
       live: "https://skillnexus-ai.vercel.app",
@@ -87,10 +87,10 @@ window.CONFIG = {
   ],
 
   skills: {
-    "AI & Agents": ["Google Gemini API", "LLM Swarms", "Prompt Engineering", "RAG", "Amazon Bedrock", "Groq", "NVIDIA Nemotron 3", "YOLOv8", "ONNX", "MediaPipe"],
-    "Backend & Systems": ["FastAPI", "Python", "REST APIs", "SQLAlchemy", "Pydantic", "PostgreSQL", "SQLite", "DynamoDB", "HMAC-SHA256", "JWT Auth", "Docker"],
-    "Web & UI Prototyping": ["HTML5", "CSS3", "Tailwind CSS", "Streamlit (Python)", "Responsive Web", "REST API Integration"],
-    "DevOps & Tools": ["AWS (Lambda, S3, API Gateway)", "GitHub Actions (CI/CD)", "Vercel", "Git", "Linux CLI", "Postman", "SQL"]
+    "AI & Intelligent Systems": ["Google Gemini API", "LLM Swarms", "Prompt Engineering", "RAG", "Amazon Bedrock", "Groq", "NVIDIA Nemotron 3", "YOLOv8", "ONNX", "MediaPipe"],
+    "Software Engineering & Systems": ["Python", "FastAPI", "REST API Design", "SQL", "PostgreSQL", "DynamoDB", "HMAC-SHA256", "Docker", "Data Structures & Algos"],
+    "Product Engineering & Leadership": ["Technical Team Leadership", "Product Engineering (0 → 1 MVP)", "System Architecture & RFCs", "User Research & Roadmapping", "Agile Sprints & Reviews"],
+    "Cloud & DevOps Platforms": ["AWS (Lambda, S3, API Gateway)", "GitHub Actions (CI/CD)", "Vercel", "Git", "Linux CLI", "Postman", "Streamlit", "HTML5 & CSS3"]
   },
 
   resume: {
@@ -98,16 +98,22 @@ window.CONFIG = {
     pdfPath: "media/resume.pdf",
     experience: [
       {
-        role: "Software Engineering Intern (Full Stack)",
-        company: "Thiranex (Remote)",
-        period: "May 2026 – Jun 2026",
-        desc: "Shipped full-stack features with strict code review standards and CI/CD pipelines."
-      },
-      {
         role: "HackerRank Campus Crew Leader",
         company: "SKCET",
         period: "Nov 2026 – Present",
-        desc: "Led campus dev community; authored and directed 'Mission 404' 6-problem contest."
+        desc: "Direct campus developer community (500+ peers); authored and managed 'Mission 404' 6-problem contest; lead algorithmic problem-solving and system workshops."
+      },
+      {
+        role: "Technical Team Lead & AI Product Architect",
+        company: "Hackathons & IIT Symposiums",
+        period: "Aug 2025 – Present",
+        desc: "Led engineering teams across 5+ national hackathons (IIT Madras Shaastra, IIT Kharagpur Megalith, PromptWars RTC); owned 0 → 1 product lifecycle from user research to production cloud deployments."
+      },
+      {
+        role: "Software Engineering Intern (Full Stack)",
+        company: "Thiranex (Remote)",
+        period: "May 2026 – Jun 2026",
+        desc: "Shipped production features with strict CI/CD pipelines, automated testing (38/38 passing test suites), and peer code reviews."
       }
     ],
     education: [
@@ -115,7 +121,7 @@ window.CONFIG = {
         degree: "B.E. Electronics & Communication Engineering",
         institution: "Sri Krishna College of Engineering & Technology (SKCET), Coimbatore",
         period: "Aug 2025 – Aug 2029 (Expected)",
-        details: "CGPA: 9.1 / 10 · Class Representative"
+        details: "CGPA: 9.1 / 10 · Class Representative · Top 1% of Batch"
       }
     ]
   },
