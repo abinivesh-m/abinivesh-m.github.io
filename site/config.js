@@ -1,8 +1,8 @@
 window.CONFIG = {
   name: "Abinivesh M",
-  role: "AI Product Engineer · Full Stack SDE",
+  role: "Software Development Engineer (SDE) · AI Systems",
   location: "Namakkal & Coimbatore, Tamil Nadu, India",
-  status: "Open to Tier-1 SDE & AI Roles",
+  status: "Open to SDE & AI Roles",
   accentColor: "#ff9a4d",
   headingFont: "Anton, sans-serif",
   bodyFont: "Inter, sans-serif",
