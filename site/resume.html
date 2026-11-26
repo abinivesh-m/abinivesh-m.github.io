@@ -14,6 +14,7 @@
        ATS-FRIENDLY CLEAN STANDALONE RESUME
        - 100% Grounded, verifiable, recruiter-audited profile
        - Strict single-column hierarchy for linear ATS parsing
+       - Impact-first bullets: every project line carries a verifiable proof point
        - Compact A4 print stylesheet engineered for exact 1-page fit
        ========================================================================== */
     @page {
@@ -29,8 +30,8 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 7.95pt;
-      line-height: 1.24;
+      font-size: 8.5pt;
+      line-height: 1.28;
       color: #111827;
       background: #f1f5f9;
       padding: 1.25rem 1rem;
@@ -128,7 +129,7 @@
     }
 
     .contact-info {
-      font-size: 7.5pt;
+      font-size: 7.9pt;
       color: #475569;
       margin-top: 2.5px;
       display: flex;
@@ -154,7 +155,7 @@
 
     /* Standard ATS Section Headings */
     h2.section-heading {
-      font-size: 8.5pt;
+      font-size: 9pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.65px;
@@ -186,14 +187,14 @@
     }
 
     .meta-date {
-      font-size: 7.4pt;
+      font-size: 7.9pt;
       font-weight: 600;
       color: #475569;
       white-space: nowrap;
     }
 
     .sub-meta {
-      font-size: 7.35pt;
+      font-size: 7.9pt;
       font-weight: 600;
       color: #ea580c;
       margin-top: 0.5px;
@@ -211,7 +212,7 @@
 
     .tech-pill-list {
       font-family: 'SFMono-Regular', Consolas, "Liberation Mono", Menlo, monospace;
-      font-size: 7pt;
+      font-size: 7.4pt;
       color: #475569;
     }
 
@@ -222,8 +223,8 @@
     }
 
     ul.bullet-list li {
-      font-size: 7.7pt;
-      line-height: 1.23;
+      font-size: 8.2pt;
+      line-height: 1.28;
       margin-bottom: 1px;
       color: #1e293b;
     }
@@ -231,14 +232,14 @@
     /* Skills Key-Value Grid */
     .skills-block {
       width: 100%;
-      font-size: 7.7pt;
+      font-size: 8.2pt;
       margin-top: 1px;
     }
 
     .skill-line {
       display: flex;
       margin-bottom: 1px;
-      line-height: 1.23;
+      line-height: 1.28;
     }
 
     .skill-type {
@@ -256,7 +257,7 @@
     /* Footer Metadata */
     footer.resume-footer {
       margin-top: 3px;
-      font-size: 6.8pt;
+      font-size: 7.2pt;
       color: #64748b;
       display: flex;
       justify-content: space-between;
@@ -277,7 +278,7 @@
       .resume-sheet {
         border: none !important;
         box-shadow: none !important;
-        padding: 0 !important;
+        padding: 0 2px !important;
         max-width: 100% !important;
       }
       a {
@@ -304,10 +305,10 @@
     <!-- Header: Identity & Contact -->
     <header class="resume-header">
       <h1 class="applicant-name">Abinivesh M</h1>
-      <div class="target-role">SOFTWARE DEVELOPMENT ENGINEER | AI PRODUCT ENGINEER | BACKEND & INTELLIGENT SYSTEMS</div>
-      <div class="credential-tagline">3× Hackathon Winner (PromptWars 2026 Winner) · 2× IIT Finalist (IIT Madras & KGP) · HackerRank Campus Crew Leader</div>
+      <div class="target-role">SOFTWARE DEVELOPMENT ENGINEER | AI PRODUCT ENGINEER | BACKEND &amp; INTELLIGENT SYSTEMS</div>
+      <div class="credential-tagline">3× Hackathon Winner (PromptWars 2026 Winner) · 2× IIT Finalist (IIT Madras &amp; KGP) · HackerRank Campus Crew Leader</div>
       <div class="contact-info">
-        <span>Coimbatore, Tamil Nadu, India</span>
+        <span>Coimbatore, India</span>
         <span class="sep">·</span>
         <a href="tel:+917708463449">+91 77084 63449</a>
         <span class="sep">·</span>
@@ -330,11 +331,11 @@
           <div class="meta-date">Aug 2025 – Aug 2029 (Expected)</div>
         </div>
         <div class="row-flex">
-          <div class="italic-subtitle">Bachelor of Engineering (B.E.) — Electronics & Communication Engineering</div>
+          <div class="italic-subtitle">Bachelor of Engineering (B.E.) — Electronics &amp; Communication Engineering</div>
           <div class="bold-title">CGPA: 9.1 / 10.0 (4th Semester Official)</div>
         </div>
-        <div style="font-size: 7.3pt; color: #475569; margin-top: 0.5px;">
-          <span class="bold-title">Relevant Coursework:</span> Data Structures & Algorithms, Object-Oriented Programming (OOP), Database Management Systems (DBMS), Operating Systems, Computer Networks, Software Engineering.
+        <div style="font-size: 7.9pt; color: #475569; margin-top: 0.5px;">
+          <span class="bold-title">Applied Coursework:</span> Data Structures &amp; Algorithms (113 LeetCode problems in Python) · Object-Oriented Design (modular FastAPI services) · Relational Database Design (PostgreSQL schema, NexusShield) · Operating Systems (async concurrency in FastAPI) · Computer Networks (REST API design)
         </div>
       </div>
     </section>
@@ -344,19 +345,19 @@
       <h2 id="section-skills" class="section-heading">Technical Skills</h2>
       <div class="skills-block">
         <div class="skill-line">
-          <span class="skill-type">Languages & Web:</span>
+          <span class="skill-type">Languages &amp; Web:</span>
           <span class="skill-items">Python, SQL, HTML5, CSS3, Streamlit</span>
         </div>
         <div class="skill-line">
-          <span class="skill-type">Backend & Databases:</span>
-          <span class="skill-items">FastAPI (Async APIs), REST APIs, PostgreSQL, SQLite, DynamoDB</span>
+          <span class="skill-type">Backend &amp; Databases:</span>
+          <span class="skill-items">FastAPI (Async APIs), REST API Design, PostgreSQL, SQLite, DynamoDB</span>
         </div>
         <div class="skill-line">
-          <span class="skill-type">AI, LLMs & Vision:</span>
+          <span class="skill-type">AI, LLMs &amp; Vision:</span>
           <span class="skill-items">Google Gemini API, Amazon Bedrock, Groq, Tavily, Prompt Engineering, OpenCV, YOLOv8, MediaPipe</span>
         </div>
         <div class="skill-line">
-          <span class="skill-type">Cloud, DevOps & Tools:</span>
+          <span class="skill-type">Cloud, DevOps &amp; Tools:</span>
           <span class="skill-items">AWS (Lambda, API Gateway, S3), Docker, Git, GitHub Actions (CI/CD), pytest (TDD), Linux CLI, Postman, Vercel</span>
         </div>
       </div>
@@ -374,8 +375,8 @@
         </div>
         <div class="sub-meta">1st Place Winner (₹20,000) — PromptWars × RTC GDC Hackathon 2026 | <a href="https://github.com/abinivesh-m/Skillnexus-ai" target="_blank" rel="noreferrer">github.com/abinivesh-m/Skillnexus-ai</a></div>
         <ul class="bullet-list">
-          <li>Architected a 6-agent collaborative LLM workflow (Profile, Gap, Curriculum, Resource, Assessor, Mentor) with deterministic readiness scoring and DAG sequencing via Gemini API and FastAPI.</li>
-          <li>Engineered asynchronous 'what-if' counterfactual simulation logic recalculating readiness scores on skill mastery; containerized lightweight backend for serverless Cloud Run deployment.</li>
+          <li>Architected a 6-agent collaborative LLM workflow (Profile, Gap, Curriculum, Resource, Assessor, Mentor) that scores career readiness deterministically across six dependency-ordered stages, built on async FastAPI and Gemini API.</li>
+          <li>Added live what-if simulation that re-scores readiness the moment a skill is marked mastered, then containerized the same backend with Docker for serverless Cloud Run deployment.</li>
         </ul>
       </article>
 
@@ -387,8 +388,8 @@
         </div>
         <div class="sub-meta">38/38 Passing pytest CI/CD Tests | Google DeepMind × Cloud Buildathon | <a href="https://github.com/abinivesh-m/Nexus-Shield" target="_blank" rel="noreferrer">github.com/abinivesh-m/Nexus-Shield</a></div>
         <ul class="bullet-list">
-          <li>Engineered an AI scam detection pipeline scoring internship and job offers with Gemini API red-flag explanations and automated employer domain verification.</li>
-          <li>Designed PostgreSQL relational schema and HMAC-SHA256 verification receipts; enforced 38/38 passing pytest test suites running via GitHub Actions CI/CD.</li>
+          <li>Engineered a scam-detection pipeline that scores internship and job offers for fraud risk in a single pass, pairing Gemini API red-flag explanations with automated employer domain verification so a user gets a verdict and a reason, not just a flag.</li>
+          <li>Designed the PostgreSQL relational schema and HMAC-SHA256 tamper-evident verification receipts; kept 38/38 pytest suites green on every commit through GitHub Actions CI/CD.</li>
         </ul>
       </article>
 
@@ -400,28 +401,28 @@
         </div>
         <div class="sub-meta">Smart India Hackathon 2026 BEL Problem (Top 50 of 750 Teams, Team Leader) | <a href="https://github.com/abinivesh-m/TrackX" target="_blank" rel="noreferrer">github.com/abinivesh-m/TrackX</a></div>
         <ul class="bullet-list">
-          <li>Built an ANPR vehicle tracking pipeline fusing plate text OCR, vehicle visual appearance, and camera timestamps from CCTV video feeds (TRL 4–5).</li>
-          <li>Served real-time detection inference via FastAPI backend to a React trajectory dashboard; led 4-engineer team to Top 50 of 750 teams in SIH internal round.</li>
+          <li>Built an ANPR vehicle-tracking pipeline (TRL 4–5) that fuses plate-text OCR, vehicle visual appearance, and camera timestamps so a single vehicle can be followed across disconnected CCTV feeds instead of per-camera snapshots.</li>
+          <li>Served real-time inference through a FastAPI backend to a React trajectory dashboard; led a 4-engineer team into the Top 50 of 750 teams in the SIH 2026 internal round on the BEL problem statement.</li>
         </ul>
       </article>
 
       <!-- Project 4 -->
       <article class="entry">
         <div class="row-flex">
-          <div><span class="bold-title">RoadSOS — Driver Safety & Emergency Response</span></div>
+          <div><span class="bold-title">RoadSOS — Driver Safety &amp; Emergency Response</span></div>
           <div class="tech-pill-list">Python · YOLOv8 · MediaPipe · Streamlit · GPS</div>
         </div>
         <div class="sub-meta">National Finalist (Selected from 15,000+ regs at IIT Madras) | <a href="https://github.com/abinivesh-m/RoadSOS-AI" target="_blank" rel="noreferrer">github.com/abinivesh-m/RoadSOS-AI</a></div>
         <ul class="bullet-list">
-          <li>Selected as National Finalist at BIMSTEC AI National Road Safety Hackathon (IIT Madras); built dual-stream monitoring detecting phone distraction (YOLOv8) and drowsiness (MediaPipe Eye Aspect Ratio).</li>
-          <li>Engineered an automated emergency SOS dispatch pipeline passing GPS coordinates to alert endpoints with a 15-second false-alarm cancel timer.</li>
+          <li>Built dual-stream driver monitoring — YOLOv8 for phone distraction, MediaPipe Eye Aspect Ratio for drowsiness — and earned National Finalist selection from 15,000+ registrations at the BIMSTEC AI Road Safety Hackathon, IIT Madras.</li>
+          <li>Engineered an automated SOS dispatch pipeline that forwards GPS coordinates to alert endpoints on trigger, guarded by a 15-second false-alarm cancel window to suppress spurious alerts.</li>
         </ul>
       </article>
     </section>
 
     <!-- Work Experience & Leadership Section -->
     <section aria-labelledby="section-experience">
-      <h2 id="section-experience" class="section-heading">Work Experience & Leadership</h2>
+      <h2 id="section-experience" class="section-heading">Work Experience &amp; Leadership</h2>
 
       <!-- Leadership 1 -->
       <article class="entry">
@@ -430,7 +431,7 @@
           <div class="meta-date">Nov 2026 – Present | Coimbatore, India</div>
         </div>
         <ul class="bullet-list">
-          <li>Direct campus developer community (500+ peers); designed and executed <strong>"Mission 404"</strong> 6-problem coding contest with cross-department participation; mentor students in algorithmic problem solving and Python.</li>
+          <li>Lead a 500+ peer campus developer community; authored and ran <strong>"Mission 404"</strong>, a 6-problem contest opened across departments, and coach students in Python and algorithmic problem solving.</li>
         </ul>
       </article>
 
@@ -441,7 +442,7 @@
           <div class="meta-date">Aug 2025 – Present</div>
         </div>
         <ul class="bullet-list">
-          <li>Led cross-functional student teams in national hackathons; won 1st Place at PromptWars 2026 (₹20,000) and National Finalist at IIT Madras BIMSTEC AI Hackathon (15,000+ registrations).</li>
+          <li>Led cross-functional student teams to 1st Place at PromptWars 2026 (₹20,000) and National Finalist at the BIMSTEC AI Hackathon, IIT Madras — selected from 15,000+ registrations; owned team scope, build split, and the final stakeholder pitch.</li>
         </ul>
       </article>
 
@@ -452,28 +453,39 @@
           <div class="meta-date">Aug 2025 – Present | Coimbatore, India</div>
         </div>
         <ul class="bullet-list">
-          <li>Elected student representative for 60+ engineers; coordinate academic deliverables and department technical symposium schedules with senior faculty.</li>
+          <li>Elected by 60+ engineering peers; coordinate academic deliverables and department technical symposium scheduling with senior faculty, owning the student-to-faculty communication channel for the cohort.</li>
         </ul>
       </article>
 
       <!-- Experience 1 -->
       <article class="entry">
         <div class="row-flex">
+          <div><span class="bold-title">Embedded Systems Intern (Virtual)</span> — SYNKOC IT Services, Bangalore</div>
+          <div class="meta-date">Oct 2026 – Nov 2026 | Remote</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Completed a 1-month embedded systems program via the AICTE Internship Portal and independently built the capstone <strong>Smart EV Monitoring &amp; Anti-Theft System using IoT</strong>, approved by a SYNKOC instructor; certificate SYNKOC-IC-2026-072 and LOR verifiable at synkoc.com.</li>
+        </ul>
+      </article>
+
+      <!-- Experience 2 -->
+      <article class="entry">
+        <div class="row-flex">
           <div><span class="bold-title">Software Engineering Intern</span> — Thiranex</div>
           <div class="meta-date">May 2026 – Jun 2026 | Remote</div>
         </div>
         <ul class="bullet-list">
-          <li>Developed responsive full-stack features and automated linting/test workflows in GitHub Actions CI/CD pipelines under senior engineer code reviews.</li>
+          <li>Shipped responsive full-stack features under senior-engineer code review, and automated lint and test gates in GitHub Actions CI/CD so every merge ran the same checks.</li>
         </ul>
       </article>
     </section>
 
     <!-- Competitive Programming & Honors Section -->
     <section aria-labelledby="section-honors">
-      <h2 id="section-honors" class="section-heading">Competitive Programming & Honors</h2>
+      <h2 id="section-honors" class="section-heading">Competitive Programming &amp; Honors</h2>
       <ul class="bullet-list">
         <li><span class="bold-title">LeetCode:</span> 113 problems solved in Python (Arrays, Hash Maps, Two Pointers, Trees) · Contest Rating: <span class="bold-title">1480</span> · 81.3% Acceptance Rate (<a href="https://leetcode.com/u/Abinivesh__M/" target="_blank" rel="noreferrer">leetcode.com/u/Abinivesh__M/</a>).</li>
-        <li><span class="bold-title">Hackathons & Honors:</span> 1st Place Winner PromptWars RTC (₹20,000) · National Finalist IIT Madras (15,000+ regs) · 4th Place ChurnZero (IIT Kharagpur) · Top 50 of 750 Teams SIH 2026 (SKCET).</li>
+        <li><span class="bold-title">Hackathons &amp; Honors:</span> 1st Place Winner PromptWars RTC (₹20,000) · National Finalist IIT Madras (15,000+ regs) · 4th Place ChurnZero (IIT Kharagpur) · Top 50 of 750 Teams SIH 2026 (SKCET).</li>
         <li><span class="bold-title">Certifications:</span> HackerRank Software Engineer Intern (ID: 6B083196A958) · AI For Everyone (DeepLearning.AI) · eSim (IIT Bombay / SINE, Score: 85.71%).</li>
       </ul>
     </section>
@@ -483,7 +495,7 @@
       <span>Languages: English (Professional), Tamil (Native)</span>
       <span>
         Last Updated: 
-        <time id="last-updated" datetime="2026-11-24">24 November 2026</time>
+        <time id="last-updated" datetime="2026-11-26">26 November 2026</time>
       </span>
     </footer>
 

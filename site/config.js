@@ -98,6 +98,16 @@ window.CONFIG = {
     pdfPath: "media/resume.pdf",
     experience: [
       {
+        role: "Embedded Systems Intern (Virtual)",
+        company: "SYNKOC IT Services, Bangalore · AICTE",
+        period: "Oct 2026 – Nov 2026",
+        desc: "Completed a 1-month embedded systems program via the AICTE Internship Portal; independently built the capstone 'Smart EV Monitoring & Anti-Theft System using IoT', approved by a SYNKOC instructor.",
+        verify: [
+          { label: "Certificate · IC-2026-072", href: "media/SYNKOC-IC-2026-072-Embedded-Systems-Certificate.pdf" },
+          { label: "Recommendation Letter · LOR-2026-070", href: "media/SYNKOC-LOR-2026-070-Recommendation-Letter.pdf" }
+        ]
+      },
+      {
         role: "HackerRank Campus Crew Leader",
         company: "SKCET",
         period: "Nov 2026 – Present",

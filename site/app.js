@@ -583,6 +583,7 @@
           <div class="resume-role">${e.role}</div>
           <div class="resume-meta">${e.company} · ${e.period}</div>
           <p class="resume-desc">${e.desc}</p>
+          ${e.verify ? `<div class="resume-verify">${e.verify.map(v => `<a href="${v.href}" target="_blank" rel="noreferrer" class="resume-verify-link">${v.label} ↗</a>`).join('')}</div>` : ''}
         </div>
       `).join('');
     }

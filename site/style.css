@@ -1126,6 +1126,36 @@ html, body {
   color: #b5afa8;
 }
 
+/* Verifiable credential links inside a résumé card */
+.resume-verify {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+.resume-verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  color: var(--color-accent);
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid rgba(255, 154, 77, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 154, 77, 0.07);
+  transition: all 0.25s;
+}
+
+.resume-verify-link:hover {
+  background: rgba(255, 154, 77, 0.18);
+  border-color: rgba(255, 154, 77, 0.55);
+  transform: translateY(-1px);
+}
+
 .leetcode-highlight {
   margin-top: 1.5rem;
   padding: 1.25rem;
