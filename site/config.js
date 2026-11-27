@@ -56,7 +56,7 @@ window.CONFIG = {
       id: "roadsos",
       title: "RoadSOS",
       tagline: "Driver Safety & Emergency Response",
-      award: "National Finalist — Top 20 of 21,000+ (BIMSTEC, IIT Madras)",
+      award: "National Finalist — Top 5 of 21,000+ (BIMSTEC, IIT Madras)",
       desc: "Real-time driver safety monitoring detecting phone distraction (YOLOv8) and drowsiness (MediaPipe EAR) with an automated GPS SOS alert pipeline and 15-second cancel timer. National Finalist at IIT Madras.",
       tech: ["Python", "YOLOv8", "MediaPipe", "Streamlit", "GPS"],
       github: "https://github.com/abinivesh-m/RoadSOS-AI",
@@ -117,7 +117,7 @@ window.CONFIG = {
         role: "Hackathon Team Lead",
         company: "National Competitions",
         period: "Aug 2025 – Present",
-        desc: "Led cross-functional student teams in national hackathons; won 1st Place at PromptWars 2026 (₹20,000) and placed Top 20 of 21,000+ at the BIMSTEC AI Road Safety Hackathon, IIT Madras."
+        desc: "Led cross-functional student teams in national hackathons; won 1st Place at PromptWars 2026 (₹20,000) and placed Top 5 of 21,000+ at the BIMSTEC AI Road Safety Hackathon, IIT Madras."
       },
       {
         role: "Class Representative",
