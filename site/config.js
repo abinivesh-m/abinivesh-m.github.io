@@ -13,7 +13,7 @@ window.CONFIG = {
     paragraph: "2nd-year B.E. ECE student at SKCET with a 9.1 CGPA. I focus on building reliable backend APIs, practical AI workflows, and computer vision prototypes. 3× Hackathon Winner, 2× IIT Finalist, HackerRank Campus Crew Leader, and Class Representative.",
     stats: [
       { value: "1st Place", label: "PromptWars RTC", sub: "₹20,000 Winner & Team Lead" },
-      { value: "9.1", label: "CGPA @ SKCET", sub: "B.E. ECE (4th Semester)" },
+      { value: "9.1", label: "CGPA @ SKCET", sub: "B.E. ECE (Current)" },
       { value: "3× / 2×", label: "Hackathons / IIT", sub: "Team Leader · IIT Madras & KGP" },
       { value: "113+", label: "LeetCode Solved", sub: "Python · 81.3% Accuracy" }
     ]
@@ -89,7 +89,7 @@ window.CONFIG = {
   skills: {
     "Languages & Web": ["Python", "SQL", "HTML5", "CSS3", "Streamlit"],
     "Backend & Databases": ["FastAPI (Async APIs)", "REST APIs", "PostgreSQL", "SQLite", "DynamoDB"],
-    "AI, LLMs & Vision": ["Google Gemini API", "Amazon Bedrock", "Groq", "Tavily", "Prompt Engineering", "OpenCV", "YOLOv8", "MediaPipe"],
+    "AI, LLMs & Vision": ["Google Gemini API", "Amazon Bedrock", "Groq", "Tavily", "Prompt Engineering", "Machine Learning", "Computer Vision", "OpenCV", "YOLOv8", "MediaPipe"],
     "Cloud, DevOps & Tools": ["AWS (Lambda, API Gateway, S3)", "Docker", "Git", "GitHub Actions (CI/CD)", "pytest (TDD)", "Linux CLI", "Postman", "Vercel"]
   },
 
@@ -137,7 +137,7 @@ window.CONFIG = {
         degree: "B.E. Electronics & Communication Engineering",
         institution: "Sri Krishna College of Engineering & Technology (SKCET), Coimbatore",
         period: "Aug 2025 – Aug 2029 (Expected)",
-        details: "CGPA: 9.1 / 10.0 (4th Semester Official)"
+        details: "CGPA: 9.1 / 10.0 (Current)"
       }
     ]
   },
