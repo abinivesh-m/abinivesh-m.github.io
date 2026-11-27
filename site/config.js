@@ -117,7 +117,7 @@ window.CONFIG = {
         role: "Hackathon Team Lead",
         company: "National Competitions",
         period: "Aug 2025 – Present",
-        desc: "Led cross-functional student teams in national hackathons; won 1st Place at PromptWars 2026 (₹20,000) and placed Top 20 of 21,000+ at the BIMSTEC AI National Road Safety Hackathon, IIT Madras."
+        desc: "Led cross-functional student teams in national hackathons; won 1st Place at PromptWars 2026 (₹20,000) and placed Top 20 of 21,000+ at the BIMSTEC AI Road Safety Hackathon, IIT Madras."
       },
       {
         role: "Class Representative",
